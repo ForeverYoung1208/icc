@@ -1,0 +1,13 @@
+ru:
+  time:
+    formats:
+      default: "%HH:%MM"
+  date:
+    formats:
+      default: "%DD.%MM.%YYYY"
+
+  menu:
+    main: "Главная"
+    services: "Услуги"
+    news: "Новости"
+    contacts: "Контакты"

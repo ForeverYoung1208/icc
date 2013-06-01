@@ -1,0 +1,12 @@
+ua:
+  time:
+    formats:
+      default: "%HH:%MM"
+  date:
+    formats:
+      default: "%DD.%MM.%YYYY"
+  menu:
+    main: "Головна"
+    services: "Послуги"
+    news: "Новини"
+    contacts: "Контакти"

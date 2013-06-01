@@ -1,3 +1,79 @@
 // Place all the styles related to the Main controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$debug-color: #FFFFFF;
+$debug-color-width: 1px;
+$logo-height: 150px*1;
+$logo-width: 300px*1.5;
+$menu-height: 20px;
+$buffer: 10px;
+$menu-distantion: 60px;
+$menu-padding:10px;
+
+body {
+	background-color: #401010;
+}
+
+#all_wrapper {
+	background-color: $debug-color;
+	width: 960px;
+	margin:0 auto;
+	padding: 10px;
+}
+
+
+#head-wrapper{
+	background-color: $debug-color - 20;
+	width: 100%;
+	height: $logo-height + $debug-color-width * 2 + $buffer;
+}
+#head-logo {
+	background-color: $debug-color - 10;
+	border: solid;
+	border-width: $debug-color-width;
+	width: $logo-width;
+	height: $logo-height;
+	float: left;
+}
+#head-name {
+	margin-left: 5px;
+	width: 960px - $logo-width - $debug-color-width * 2 - $buffer;
+	float: left;
+	text-transform: uppercase;
+}
+#lang-selector{
+	width: 100%;
+	height: 1em;
+	span {
+		float:right;
+		font-style: italic;
+		font-family: monospace;
+	}
+}
+#menu-wrapper{
+	width: 100%;
+	height: $menu-height + $menu-padding * 2;
+	border-top: solid 1px;
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		li{
+			background-color: $debug-color - 40;
+			margin-right: $menu-distantion;
+			padding: $menu-padding;
+			float: left;
+		}
+	}
+}
+
+#content-wrapper{
+	background-color: $debug-color - 30;
+	top: $logo-height + $menu-height + $menu-padding * 2;
+	float:none;
+}
+
+#titles{
+
+}
