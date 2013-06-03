@@ -1,33 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang=ru>
 <head>
 	<title>Icc</title>
 	<%= stylesheet_link_tag    "application", :media => "all" %>
 	<%= javascript_include_tag "application" %>
  	<%= csrf_meta_tags %>
+	<meta charset="utf-8">
 </head>
 
 <body>
 <div id='all_wrapper'>
-	<header id='head-wrapper'>
-		<div id='head-logo'>Логотип ICC ltd.</div>
-		<div id='head-name'>
+	<header>
+		<div id='logo'>Логотип ICC ltd.</div>
+		<div id='name'>
 			<h2>INVESTMENT CONSULTING CENTRE</h2>
 			<h2>ЦЕНТР ІНВЕСТИЦІЙНОГО КОНСАЛТИНГУ</h2>
 	</header>
 	<div id='lang-selector'><span>ru|en|ua</span></div>
-	<div id='menu-wrapper'>
+	<nav>
 		<ul id='menu'>
 			<li><%=t 'menu.main' %></li> 
 			<li><%=t 'menu.services' %></li>
 			<li><%=t 'menu.news' %></li>
 			<li><%=t 'menu.contacts' %></li>
 		</ul>
-	</div>
+	</nav>
 	
-	<div id='content-wrapper'>
+	<section id='content'>
 		<%= yield %>
-	</div>
+	</section>
+	<footer>
+	</footer>
 
 </div>		
 </body>
