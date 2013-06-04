@@ -2,6 +2,7 @@
 <html lang=ru>
 <head>
 	<title>Icc</title>
+	
 	<%= stylesheet_link_tag    "application", :media => "all" %>
 	<%= javascript_include_tag "application" %>
  	<%= csrf_meta_tags %>
@@ -16,10 +17,10 @@
 			<h2>INVESTMENT CONSULTING CENTRE</h2>
 			<h2>ЦЕНТР ІНВЕСТИЦІЙНОГО КОНСАЛТИНГУ</h2>
 	</header>
-	<div id='lang-selector'><span>ru|en|ua</span></div>
+	<div id='lang-selector'><span><a href="#">ru</a>|<a href="#">en</a>|<a href="#">ua</a></span></div>
 	<nav>
 		<ul id='menu'>
-			<li><%=t 'menu.main' %></li> 
+			<li class='selected'><%=t 'menu.main' %></li> 
 			<li><%=t 'menu.services' %></li>
 			<li><%=t 'menu.news' %></li>
 			<li><%=t 'menu.contacts' %></li>
