@@ -12,10 +12,15 @@
 <body>
 <div id='all_wrapper'>
 	<header>
-		<div id='logo'>Логотип ICC ltd.</div>
-		<div id='name'>
-			<h2>INVESTMENT CONSULTING CENTRE</h2>
-			<h2>ЦЕНТР ІНВЕСТИЦІЙНОГО КОНСАЛТИНГУ</h2>
+		<div id='header'>
+			<div id='logo'>
+				<%= image_tag 'logo.png' %>
+			</div>
+			<div id='name'>
+				<h2>INVESTMENT CONSULTING CENTRE</h2>
+				<h2>ЦЕНТР ІНВЕСТИЦІЙНОГО КОНСАЛТИНГУ</h2>
+			</div>
+		</div>
 	</header>
 	<div id='lang-selector'><span><a href="#">ru</a>|<a href="#">en</a>|<a href="#">ua</a></span></div>
 	<nav>
@@ -30,9 +35,13 @@
 	<section id='content'>
 		<%= yield %>
 	</section>
+	<div style="height:1px;overflow:hidden;clear:both;"></div>
 	<footer>
+		<div id='footer'>
+			Сайт виготовлено ТОВ "ЦІК"
+		</div>
 	</footer>
-
+	
 </div>		
 </body>
 

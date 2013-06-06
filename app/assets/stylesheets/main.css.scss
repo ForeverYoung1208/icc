@@ -10,6 +10,7 @@ $debug-color-width: 0px;
 
 $logo-height: 150px*1;
 $logo-width: 450px;
+$logo-distantion: 40px;
 $menu-height: 20px;
 $buffer: 5px;
 $menu-distantion: 60px;
@@ -43,7 +44,7 @@ body {
 }
 
 
-header{
+#header{
 	background-color: $debug-color - 2*$d;
 	width: 100%;
 	height: $logo-height + $debug-color-width * 2 + $buffer;
@@ -54,13 +55,19 @@ header{
 		width: $logo-width;
 		height: $logo-height;
 		float: left;
+		img {
+			width:100%;
+		}
 	}
 	#name {
-		margin-left: 5px;
-		width: 960px - $logo-width - $debug-color-width * 2 - $buffer;
+		margin-left: $logo-distantion;
+		width: 960px - $logo-width - $debug-color-width * 2 - $logo-distantion;
 		display: inline-block;
 		text-transform: uppercase;
 		color: $tile-color-4;
+		h2 {
+			
+		}
 	}
 }
 
@@ -75,7 +82,7 @@ header{
 }
 nav{
 	width: 100%;
-	height: $menu-height + $menu-padding * 2;
+	height: $menu-height + $menu-padding * 2 + $buffer;
 	border-top: 1px solid red;
 	ul {
 		margin: 0;
@@ -174,3 +181,9 @@ section#content{
 		width: 60%;
 	}
 };
+
+#footer {
+	width: 100%;
+	border-top: 1px solid red;
+	text-align: center;
+}
