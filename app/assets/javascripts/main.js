@@ -11,5 +11,8 @@ $(document).ready(function(){
 	        $(this).queue("fx", [])
         });
 	});
-
+	$('#menu li').on("click", function(event){
+				event.preventDefault();
+				$(this).find('a').explode;
+	});
 })
