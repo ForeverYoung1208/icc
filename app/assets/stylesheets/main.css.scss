@@ -89,24 +89,30 @@ nav{
 		padding: 0;
 		list-style-type: none;
 		li{
-			background-color: $debug-color - 4*$d;
-			margin-right: $menu-distantion;
-			padding: $menu-padding;
-			float: left;
-			font-size: larger;
-			text-transform: uppercase;
-		}
-		.selected{
-			background-color: $menu-selected-color; /* Для старых браузров */
-		    background: -moz-linear-gradient(top, $menu-selected-color, #ffffff); /* Firefox 3.6+ */
-		    /* Chrome 1-9, Safari 4-5 */
-		    background: -webkit-gradient(linear, left top, left bottom, 
-		                color-stop(0%,$menu-selected-color), color-stop(100%,#ffffff));
-		    /* Chrome 10+, Safari 5.1+ */
-		    background: -webkit-linear-gradient(top, $menu-selected-color, #ffffff);
-		    background: -o-linear-gradient(top, $menu-selected-color, #ffffff); /* Opera 11.10+ */
-		    background: -ms-linear-gradient(top, $menu-selected-color, #ffffff); /* IE10 */
-		    background: linear-gradient(top, $menu-selected-color, #ffffff); /* CSS3 */ 
+			a{
+				background-color: $debug-color - 4*$d;
+				margin-right: $menu-distantion;
+				padding: $menu-padding;
+				float: left;
+				font-size: larger;
+				text-transform: uppercase;
+				color: black;
+				text-decoration: none;
+				background-color: #fefefe; /* Для старых браузров */
+			}
+			.selected{
+				background-color: $menu-selected-color; /* Для старых браузров */
+			    background: -moz-linear-gradient(top, $menu-selected-color, #ffffff); /* Firefox 3.6+ */
+			    /* Chrome 1-9, Safari 4-5 */
+			    background: -webkit-gradient(linear, left top, left bottom, 
+			                color-stop(0%,$menu-selected-color), color-stop(100%,#ffffff));
+			    /* Chrome 10+, Safari 5.1+ */
+			    background: -webkit-linear-gradient(top, $menu-selected-color, #ffffff);
+			    background: -o-linear-gradient(top, $menu-selected-color, #ffffff); /* Opera 11.10+ */
+			    background: -ms-linear-gradient(top, $menu-selected-color, #ffffff); /* IE10 */
+			    background: linear-gradient(top, $menu-selected-color, #ffffff); /* CSS3 */ 
+			}
+
 		}
 	}
 }

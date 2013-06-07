@@ -25,10 +25,10 @@
 	<div id='lang-selector'><span><a href="#">ru</a>|<a href="#">en</a>|<a href="#">ua</a></span></div>
 	<nav>
 		<ul id='menu'>
-			<li class='selected'><%=t 'menu.main' %></li> 
-			<li><%=t 'menu.services' %></li>
-			<li><%=t 'menu.news' %></li>
-			<li><%=t 'menu.contacts' %></li>
+			<li><%=link_to t('menu.main'), :main, :class=>'selected' %></li> 
+			<li><%=link_to t('menu.services'), :services %></li>
+			<li><%=link_to t('menu.news'), :newses %></li>
+			<li><%=link_to t('menu.contacts'), :contacts %></li>
 		</ul>
 	</nav>
 	
@@ -38,7 +38,7 @@
 	<div style="height:1px;overflow:hidden;clear:both;"></div>
 	<footer>
 		<div id='footer'>
-			Сайт виготовлено ТОВ "ЦІК"
+			<%=t  'footer.copyright' %>
 		</div>
 	</footer>
 	

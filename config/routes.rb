@@ -1,5 +1,13 @@
 Icc::Application.routes.draw do
-  get "main/index"
+  
+  resources :contacts
+
+
+  resources :newses
+  resources :services
+
+
+  get "main" => 'main#index', :as=>:main
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
