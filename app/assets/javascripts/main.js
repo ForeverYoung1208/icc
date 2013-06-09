@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	$('#menu li').on("mouseenter", function(){
 				$(this).find('a').animate({
-				"background-color": "#FFF9F9",
+				"background-color": "#FFE0E0",
 		})
 	});
 	$('#menu li').on("mouseleave", function(){
@@ -13,6 +13,11 @@ $(document).ready(function(){
 	});
 	$('#menu li').on("click", function(event){
 				event.preventDefault();
-				$(this).find('a').explode;
+				$('#content').effect('fade');
+				$.ajax({
+					url:"services"
+				}).done(function(){
+					$('#content').effect('fade');
+				});
 	});
 })
