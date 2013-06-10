@@ -103,8 +103,10 @@ nav{
 				text-decoration: none;
 				background-color: #fefefe; /* Для старых браузров */
 				outline: 0;
+
 			}
 			.selected{
+				border-top: solid red;
 				background-color: $menu-selected-color; /* Для старых браузров */
 			    background: -moz-linear-gradient(top, $menu-selected-color, #ffffff); /* Firefox 3.6+ */
 			    /* Chrome 1-9, Safari 4-5 */
@@ -116,10 +118,12 @@ nav{
 			    background: -ms-linear-gradient(top, $menu-selected-color, #ffffff); /* IE10 */
 			    background: linear-gradient(top, $menu-selected-color, #ffffff); /* CSS3 */ 
 			}
-
 		}
 	}
 }
+
+
+
 
 section#content{
 	background-color: $debug-color - 3*$d;
