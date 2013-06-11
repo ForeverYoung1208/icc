@@ -26,15 +26,15 @@
 	<nav>
 		<ul id='menu'>
 			<li><%=link_to t('menu.main'), :main, :remote=>true, :class=>'selected'%></li> 
-			<li><%=link_to t('menu.services'), :services, :remote=>true %></li>
+			<li><%=link_to t('menu.services'), :services, :remote=>true%></li>
 			<li><%=link_to t('menu.news'), :newses, :remote=>true %></li>
 			<li><%=link_to t('menu.contacts'), :contacts, :remote=>true %></li>
 		</ul>
 	</nav>
 	
-	<section id='content'>
+	<div id='content'>
 		<%= yield %>
-	</section>
+	</div>
 	<div style="height:1px;overflow:hidden;clear:both;"></div>
 	<footer>
 		<div id='footer'>

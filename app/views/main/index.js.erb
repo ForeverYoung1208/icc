@@ -1,0 +1,4 @@
+$('#content').hide('fade', function(){
+	$('#content').html("<%= escape_javascript(render('index')) %>");
+});
+$('#content').show('fade');
