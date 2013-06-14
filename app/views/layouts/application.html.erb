@@ -25,10 +25,28 @@
 	<div id='lang-selector'><span><a href="#">ru</a>|<a href="#">en</a>|<a href="#">ua</a></span></div>
 	<nav>
 		<ul id='menu'>
-			<li><%=link_to t('menu.main'), :main, :remote=>true, :class=>'selected', :selected_page=>:main %></li> 
-			<li><%=link_to t('menu.services'), :services, :remote=>true, :selected_page=>:services%></li>
-			<li><%=link_to t('menu.news'), :newses, :remote=>true %></li>
-			<li><%=link_to t('menu.contacts'), :contacts, :remote=>true %></li>
+			<li>
+				<%=link_to_if(@selected_page=='main', t('menu.main'), :main, :remote=>true, :class=>'selected') do
+					link_to( t('menu.main'), :main, :remote=>true)
+				end%>
+			</li>
+
+			<li>
+				<%=link_to_if(@selected_page=='services', t('menu.services'), :services, :remote=>true, :class=>'selected') do
+					link_to( t('menu.services'), :services, :remote=>true)
+				end%>
+			</li>
+
+			<li>
+				<%=link_to_if(@selected_page=='news', t('menu.news'), :newses, :remote=>true, :class=>'selected') do
+					link_to( t('menu.news'), :newses, :remote=>true)
+				end%>
+			</li>
+			<li>
+				<%=link_to_if(@selected_page=='contacts', t('menu.contacts'), :contacts, :remote=>true, :class=>'selected') do
+					link_to( t('menu.contacts'), :contacts, :remote=>true)
+				end%>
+			</li>
 		</ul>
 	</nav>
 	<div id='content'>

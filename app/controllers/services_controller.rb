@@ -1,4 +1,5 @@
 class ServicesController < ApplicationController
+  before_filter :set_selected_page
   # GET /services
   # GET /services.json
   def index
@@ -81,4 +82,10 @@ class ServicesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  private
+  def set_selected_page
+      @selected_page = 'services'
+  end
+
 end

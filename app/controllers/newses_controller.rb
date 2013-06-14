@@ -1,5 +1,5 @@
 class NewsesController < ApplicationController
-  # GET /newses
+  before_filter :set_selected_page  # GET /newses
   # GET /newses.json
   def index
     @newses = Newse.all
@@ -80,4 +80,10 @@ class NewsesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  private
+  def set_selected_page
+      @selected_page = 'news'
+  end
+
 end

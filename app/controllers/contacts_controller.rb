@@ -1,4 +1,5 @@
 class ContactsController < ApplicationController
+  before_filter :set_selected_page
   # GET /contacts
   # GET /contacts.json
   def index
@@ -80,4 +81,9 @@ class ContactsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  private
+  def set_selected_page
+      @selected_page = 'contacts'
+  end
+
 end
