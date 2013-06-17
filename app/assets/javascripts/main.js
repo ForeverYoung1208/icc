@@ -17,4 +17,5 @@ $(document).ready(function(){
 		$(this).find('a').css({'background-color':'#F2C2C2'});
 		$(this).find('a').addClass('selected',300);
 	});
+
 })
