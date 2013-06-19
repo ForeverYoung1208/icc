@@ -55,7 +55,9 @@
 	<div style="height:1px;overflow:hidden;clear:both;"></div>
 	<footer>
 		<div id='footer'>
-			<%=t  'footer.copyright' %>
+			<%=t 'footer.copyright' %>
+			<%=link_to t('footer.login'), :new_user_session %>
+			<%=link_to t('footer.logout'), :destroy_user_session, :method=>:delete%>
 		</div>
 	</footer>
 	
