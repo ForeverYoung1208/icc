@@ -1,7 +1,9 @@
 class Service < ActiveRecord::Base
 	attr_accessible :name, :text
 	belongs_to :section
-	scope :by_section, lambda{|section_name|
-		where('section=?', section_name) unless section_name.nil?
+
+## по-моему, это можно заменить find_all_by_section_id или вообще Sections.service.all
+	scope :by_section, lambda{|section_id|
+		where('section_id=?', section_id) unless section_id.nil?
 	}
 end
