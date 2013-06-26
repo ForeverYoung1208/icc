@@ -10,7 +10,7 @@
       </ul>
     </div>
   <% end %>
-  <%= f.collection_select( :section_id, Section.all, :id, :name )
+  <%= f.collection_select( :section_id, Section.all, :id, :name ) %>
   <%= f.text_field :name %>
   <%= f.text_area :text %>
 

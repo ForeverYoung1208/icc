@@ -1,3 +1,4 @@
+# ruby encoding: utf-8
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
@@ -5,3 +6,15 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+
+#section_list = [
+#  [ "Консультування з питань професійної діяльності на фондовому ринку", 1],
+#  [ "Консультування з питань професійної діяльності на фондовому ринку", 2],
+#  [ "Консультування з питань професійної діяльності на фондовому ринку", 3],
+#]
+
+#section_list.each do |name, user_id|
+#  Section.create( name: name, user_id: user_id )
+#end
