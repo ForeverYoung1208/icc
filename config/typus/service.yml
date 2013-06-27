@@ -1,0 +1,8 @@
+# Use the README file as a reference to customize settings.
+
+Service:
+  fields:
+    default: name, text, section_id
+    form: name, text, section_id
+  relationships: 
+  application: Application

@@ -5,10 +5,6 @@ ua:
   date:
     formats:
       default: "%DD.%MM.%YYYY"
-    order:
-      - :day
-      - :month
-      - :year
   menu:
     main: "Головна"
     services: "Послуги"
