@@ -1,6 +1,6 @@
-<h1>Editing service</h1>
+<h1><%=t 'services.edit_header' %></h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @service %> |
-<%= link_to 'Back', services_path %>
+<%= link_to t('services.show'), @service %> |
+<%= link_to t('services.back'), services_path %>

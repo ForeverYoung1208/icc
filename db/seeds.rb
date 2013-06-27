@@ -9,12 +9,14 @@
 
 
 
-#section_list = [
-#  [ "Консультування з питань професійної діяльності на фондовому ринку", 1],
-#  [ "Консультування з питань професійної діяльності на фондовому ринку", 2],
-#  [ "Консультування з питань професійної діяльності на фондовому ринку", 3],
-#]
+section_list = [
+  [ "Консультування з питань професійної діяльності на фондовому ринку", "secion1"],
+  [ "Консультування з питань інвестиційних технологій", "secion2"],
+  [ "Консультування з питань корпоративного управління", "secion3"],
+]
+v = I18n::Backend::ActiveRecord.new
+section_list.each do |name, key|
+  Section.create( name: key)
+  v.store_translations('ua', {key => name})
+end
 
-#section_list.each do |name, user_id|
-#  Section.create( name: name, user_id: user_id )
-#end
