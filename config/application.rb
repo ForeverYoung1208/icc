@@ -61,7 +61,7 @@ module Icc
     config.assets.version = '1.0'
 
     config.action_view.sanitized_allowed_tags = 'p', 'b', 'div', 'span', 'font'
-    config.action_view.sanitized_allowed_attributes = 'id', 'class', 'style'
+    config.action_view.sanitized_allowed_attributes = 'id', 'class', 'style', 'size'
 
   end
 end

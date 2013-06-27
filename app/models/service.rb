@@ -1,5 +1,5 @@
 class Service < ActiveRecord::Base
-	attr_accessible :name, :text
+	attr_accessible :name, :text, :section_id
 	belongs_to :section
 
 ## по-моему, это можно заменить find_all_by_section_id или вообще Sections.service.all
