@@ -13,8 +13,8 @@
 <% @services.each do |service| %>
   <tr>
     <td><%=t( service.section.name )%></td>
-    <td><%=raw( sanitize( service.name ) )%></td>
-    <td><%=raw( sanitize( service.text ) )%></td>
+    <td><%=raw( sanitize( service.name( I18n.locale ) ) )%></td>
+    <td><%=raw( sanitize( service.text( I18n.locale ) ) )%></td>
     <td><%= link_to 'Show', service %></td>
     <td><%= link_to 'Edit', edit_service_path(service) %></td>
     <td><%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -10,10 +10,25 @@
       </ul>
     </div>
   <% end %>
-  <%= f.collection_select( :section_id, Section.all, :id, :name ) %>
-  <%= f.text_field :name %>
-  <%= f.text_area :text %>
 
+  <%= t 'servises.edit.section' %>
+  <%= f.collection_select( :section_id, Section.all, :id, :name_int ) %>
+<br/>
+  <%= f.label 'Український, назва:' %>
+  <%= f.text_field :name_ua %><br/>
+  <%= f.label 'зміст:' %>
+  <%= f.text_area :text_ua %>
+<br/>
+  <%= f.label 'English, name:' %>
+  <%= f.text_field :name_en %><br/>
+  <%= f.label 'content' %>
+  <%= f.text_area :text_en %>
+<br/>
+  <%= f.label 'Русский' %>
+  <%= f.text_field :name_ru %><br/>
+    <%= f.label 'содержание' %>
+  <%= f.text_area :text_ru %>
+<br/>
   <div class="actions">
     <%= f.submit t('services.save')%>
   </div>

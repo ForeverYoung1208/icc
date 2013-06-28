@@ -1,5 +1,10 @@
 class Section < ActiveRecord::Base
-  belongs_to :user
-  has_many :servises
-  attr_accessible :name
+	belongs_to :user
+	has_many :servises
+	attr_accessible :name
+
+	def name_int
+		I18n.t( name )
+	end
+
 end

@@ -1,7 +1,15 @@
 
 $(document).ready(function(){
-	a = new nicEditor({
+	new nicEditor({
 		fullPanel : true
-	}).panelInstance('service_text',{hasPanel : true});
+	}).panelInstance('service_text_ua',{hasPanel : true});
+
+	new nicEditor({
+		fullPanel : true
+	}).panelInstance('service_text_en',{hasPanel : true});
+
+	new nicEditor({
+		fullPanel : true
+	}).panelInstance('service_text_ru',{hasPanel : true});
 
 });
