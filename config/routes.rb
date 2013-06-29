@@ -1,5 +1,8 @@
 Icc::Application.routes.draw do
   
+  resources :user_sections
+
+
   devise_for :users
 
   resources :contacts

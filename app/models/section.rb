@@ -1,7 +1,8 @@
 class Section < ActiveRecord::Base
-	belongs_to :user
 	has_many :servises
-	attr_accessible :name
+	attr_accessible :name, :users
+	has_many :user_sections
+	has_many :users, :through => :user_sections
 
 	def name_int
 		I18n.t( name )

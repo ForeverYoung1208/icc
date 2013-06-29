@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130628165155) do
+ActiveRecord::Schema.define(:version => 20130629183400) do
 
   create_table "contacts", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -25,12 +25,9 @@ ActiveRecord::Schema.define(:version => 20130628165155) do
 
   create_table "sections", :force => true do |t|
     t.string   "name"
-    t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
-
-  add_index "sections", ["user_id"], :name => "index_sections_on_user_id"
 
   create_table "services", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -63,6 +60,16 @@ ActiveRecord::Schema.define(:version => 20130628165155) do
     t.datetime "created_at",                        :null => false
     t.datetime "updated_at",                        :null => false
   end
+
+  create_table "user_sections", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "section_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "user_sections", ["section_id"], :name => "index_user_sections_on_section_id"
+  add_index "user_sections", ["user_id"], :name => "index_user_sections_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
