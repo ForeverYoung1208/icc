@@ -10,4 +10,9 @@ class User < ActiveRecord::Base
   has_many :user_sections
   has_many :sections, :through => :user_sections
   # attr_accessible :title, :body
+
+  def redactor?( section )
+    self.sectinos.include( section )
+  end
+
 end
