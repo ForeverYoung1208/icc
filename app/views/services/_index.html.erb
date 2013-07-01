@@ -1,26 +1,31 @@
-<h1><%=t 'services.header' %></h1>
+<h1 class="header"><%=t 'services.header' %></h1>
 
-<table border='solid'>
-  <tr>
-    <th>section</th>
-    <th>name</th>
-    <th>text</th>
-    <th>4</th>
-    <th>5</th>
-    <th>5</th>
-  </tr>
+<% @groups_services.each do |section, services| %>
 
-<% @services.each do |service| %>
-  <tr>
-    <td><%=t( service.section.name )%></td>
-    <td><%=raw( sanitize( service.name( I18n.locale ) ) )%></td>
-    <td><%=raw( sanitize( service.text( I18n.locale ) ) )%></td>
-    <td><%= link_to 'Show', service %></td>
-    <td><%= link_to 'Edit', edit_service_path(service) %></td>
-    <td><%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+<ul class="section_name">
+  <li>
+    <h2><%=t( section.name )%></h2>
+
+    <% services.each do |service| %>
+
+    <ul class="service">
+      <li>
+        <h3><%=raw( sanitize( service.name( I18n.locale ) ) )%></h3>
+        <p class="text"><%=raw( sanitize( service.text( I18n.locale ) ) )%></p>
+        <p class="links">
+          <%= link_to 'Show', service %> |
+          <%= link_to 'Edit', edit_service_path(service) %> |
+          <%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </p>
+      </li>
+    </ul>
+
+    <% end %>
+
+  </li>
+</ul>
+
 <% end %>
-</table>
 
 <br />
 

@@ -1,3 +1,36 @@
 // Place all the styles related to the Services controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1.header { text-align: center; }
+
+ul.section_name {
+	list-style-type: none;
+	padding: 10px;
+	margin: 15px 10px 15px 10px;
+	@each $browser in "", -webkit-, -o-, -moz-, -ms- {
+	    background: #{$browser}linear-gradient(left,white,#eeeeee);
+	} 
+
+	ul.service {
+	    list-style-type: none;
+
+	    h3 {
+	        font: {
+	            style: italic;
+	            family: heinrich;
+	        }
+	    }
+
+	    p.text {
+	        border-bottom: 1px solid #CCCCCC;
+	        padding-bottom: 10px;
+            text: {
+                align: justify;
+                indent: 25px;
+            }
+        }
+
+        p.links { text-align: right; }
+	}
+}

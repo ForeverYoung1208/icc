@@ -10,4 +10,5 @@
  *= require normalize
  *= require_self
  *= require main
+ *= require services
  */
