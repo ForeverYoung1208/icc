@@ -3,7 +3,14 @@ class ServicesController < ApplicationController
   # GET /services
   # GET /services.json
   def index
-    @services = Service.all
+    @groups_services = {}
+    @sections = Section.all
+    
+    @sections.each do |section|
+      services = Service.where(section_id: section.id)
+      @groups_services[section] = services if services.length > 0
+    end
+
     respond_to do |format|
       format.html # index.html.erb
       format.js {}

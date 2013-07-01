@@ -1,6 +1,6 @@
 class Section < ActiveRecord::Base
 	belongs_to :user
-	has_many :servises
+	has_many :services
 	attr_accessible :name
 
 	def name_int
