@@ -17,17 +17,17 @@
   <%= f.label 'Український, назва:' %>
   <%= f.text_field :name_ua %><br/>
   <%= f.label 'зміст:' %>
-  <%= f.text_area :text_ua %>
+  <%= f.text_area :text_ua, :class => "text_area" %>
   <br/>
   <%= f.label 'English, name:' %>
   <%= f.text_field :name_en %><br/>
   <%= f.label 'content' %>
-  <%= f.text_area :text_en %>
+  <%= f.text_area :text_en, :class => "text_area" %>
   <br/>
   <%= f.label 'Русский, название:' %>
   <%= f.text_field :name_ru %><br/>
     <%= f.label 'содержание' %>
-  <%= f.text_area :text_ru %>
+  <%= f.text_area :text_ru, :class => "text_area" %>
   <br/>
   <div class="actions">
     <%= f.submit t('services.save')%>
