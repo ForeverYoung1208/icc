@@ -17,7 +17,7 @@ $menu-distantion: 60px;
 $menu-padding: 10px;
 
 $tile-margin:40px;
-$tile-size: ($all-with - 6 * $tile-margin) / 3 - $buffer ;
+$tile-size: ($all-with - 6 * $tile-margin) / 3;
 
 $tile-color-1: #F2F2F2;
 $tile-color-2: #E5E5E5;
@@ -125,14 +125,14 @@ nav{
 
 
 
-section#content{
+div#content{
 	background-color: $debug-color - 3*$d;
 	width: 100% ;
-/*	display: inline-block;*/
-
+	display: inline-block;
 }
 
 .row{
+
 }
 
 .tile {
