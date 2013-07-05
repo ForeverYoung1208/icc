@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
 
   def redactor?( section )
-    self.sectinos.include( section )
+    self.sections.include?( section )
   end
 
 end

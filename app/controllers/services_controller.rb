@@ -1,5 +1,6 @@
 class ServicesController < ApplicationController
   before_filter :set_selected_page
+  before_filter :is_redactor, :except=>[:index]
   # GET /services
   # GET /services.json
   def index
@@ -91,7 +92,15 @@ class ServicesController < ApplicationController
 
   private
   def set_selected_page
-      @selected_page = 'services'
+    @selected_page = 'services'
+  end
+
+  def is_redactor
+    service = Service.find(params[:id])
+    if (current_user.nil? or not(current_user.redactor( service.section )) )
+      
+      redirect_to request.referer, :notice => "sercices_edit_error: You are not the redactor for section '#{service.section.name}'"
+    end
   end
 
 end

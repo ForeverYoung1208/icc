@@ -23,6 +23,3 @@ service_section_list.each do |name, key|
   v.store_translations('ua', {key => name})
 end
 user.save
-
-user2 = User.new(:email => 'siafin2005@rambler.ru', :password => '120880', :password_confirmation => '120880')
-user2.save
