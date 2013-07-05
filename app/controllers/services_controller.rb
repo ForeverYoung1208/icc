@@ -97,7 +97,7 @@ class ServicesController < ApplicationController
 
   def is_redactor
     service = Service.find(params[:id])
-    if (current_user.nil? or not(current_user.redactor( service.section )) )
+    if (current_user.nil? or not(current_user.redactor?( service.section )) )
       
       redirect_to request.referer, :notice => "sercices_edit_error: You are not the redactor for section '#{service.section.name}'"
     end
