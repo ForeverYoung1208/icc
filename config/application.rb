@@ -60,7 +60,7 @@ module Icc
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
-    config.action_view.sanitized_allowed_tags = 'p', 'b', 'div', 'span', 'font'
+    config.action_view.sanitized_allowed_tags = 'p', 'b', 'div', 'span', 'font','u'
     config.action_view.sanitized_allowed_attributes = 'id', 'class', 'style', 'size'
 
   end

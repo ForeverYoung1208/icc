@@ -11,8 +11,8 @@
 
 <% @user_sections.each do |user_section| %>
   <tr>
-    <td><%= user_section.user %></td>
-    <td><%= user_section.section %></td>
+    <td><%= user_section.user.email %></td>
+    <td><%= t user_section.section.name %></td>
     <td><%= link_to 'Show', user_section %></td>
     <td><%= link_to 'Edit', edit_user_section_path(user_section) %></td>
     <td><%= link_to 'Destroy', user_section, method: :delete, data: { confirm: 'Are you sure?' } %></td>

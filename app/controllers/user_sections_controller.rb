@@ -2,7 +2,7 @@ class UserSectionsController < ApplicationController
   # GET /user_sections
   # GET /user_sections.json
   def index
-    @user_sections = UserSection.all
+    @user_sections = UserSection.order('user_id ASC').all
 
     respond_to do |format|
       format.html # index.html.erb

@@ -11,7 +11,7 @@
     <ul class="service">
       <li>
         <h3><%=raw( sanitize( service.name( I18n.locale ) ) )%></h3>
-        <p class="text"><%=raw( sanitize( service.text( I18n.locale ) ) )%></p>
+        <div class="service_text"><%=raw( sanitize( service.text( I18n.locale ) ) )%></div>
         <p class="links">
           <%= link_to 'Show', service %> |
           <%= link_to 'Edit', edit_service_path(service) %> |
