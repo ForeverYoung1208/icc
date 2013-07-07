@@ -40,17 +40,19 @@ class UserSectionsController < ApplicationController
   # POST /user_sections
   # POST /user_sections.json
   def create
-    @user_section = UserSection.new(params[:user_section])
-
+    user=User.find_by_id(params[:user_section][:user])
+    user.sections << Section.find_by_id(params[:user_section][:section])
+    
     respond_to do |format|
-      if @user_section.save
-        format.html { redirect_to @user_section, notice: 'User section was successfully created.' }
-        format.json { render json: @user_section, status: :created, location: @user_section }
+      if user.save
+        format.html { redirect_to user_sections_path, notice: 'User-section was successfully created.' }
+#        format.json { render json: @user_section, status: :created, location: @user_section }
       else
         format.html { render action: "new" }
-        format.json { render json: @user_section.errors, status: :unprocessable_entity }
+#        format.json { render json: @user_section.errors, status: :unprocessable_entity }
       end
     end
+ 
   end
 
   # PUT /user_sections/1

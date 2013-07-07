@@ -64,8 +64,9 @@
 			<%=link_to_if(current_user.nil?, t('footer.login'), :new_user_session) do 
 				link_to t('footer.logout')+' ('+current_user.email+')', :destroy_user_session, :method=>:delete 
 			end%>
+			<br/><br/>
 
-			<%= link_to t('users.list'), :users_path %>
+			<%= link_to t('users.list'), :user_sections if !current_user.nil?%>
 
 		</div>
 	</footer>

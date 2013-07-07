@@ -1,5 +1,6 @@
 class UserSection < ActiveRecord::Base
   belongs_to :user
   belongs_to :section
-  # attr_accessible :title, :body
+
+  attr_accessible :user, :section
 end
