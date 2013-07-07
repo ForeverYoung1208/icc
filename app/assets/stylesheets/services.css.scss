@@ -6,14 +6,25 @@ h1.header { text-align: center; }
 
 ul.section_name {
 	list-style-type: none;
-	padding: 10px;
-	margin: 15px 10px 15px 10px;
+	padding: 20px;
+	margin: 25px 20px 25px 20px;
+	box-shadow: 4px 4px 6px 2px #777777;
 	@each $browser in "", -webkit-, -o-, -moz-, -ms- {
 	    background: #{$browser}linear-gradient(left,white,#eeeeee);
 	} 
 
+	h2 { 
+		padding-left: 10px;
+	}
+
+	img { 
+		margin: 0 30px 30px 0;
+		float: left;
+	}
+
 	ul.service {
 	    list-style-type: none;
+	    clear: both;
 
 	    h3 {
 	        font: {
