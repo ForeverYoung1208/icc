@@ -30,5 +30,12 @@ ua:
     show: "Показати"
     back: "Назад"
     save: "Зберегти"
-    edit:
+    edit: "Редагувати"
+    destroy: "Видалити"
+    new: "Нова послуга"
+    editing:
       section: "Послуга належить до розділу:"
+
+  service:
+    new_header: "Нова послуга"
+    new_back: "Назад"

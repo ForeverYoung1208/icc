@@ -22,8 +22,12 @@
 			</div>
 		</div>
 	</header>
+
+	<%= content_tag( :div, notice, :id=>'notice') if !notice.nil? %>
+
 	<div id='lang-selector'><span><a href="#">ru</a>|<a href="#">en</a>|<a href="#">ua</a></span></div>
-	<nav>
+
+	<div id='nav'>
 		<ul id='menu'>
 			<li>
 				<%=link_to_if(@selected_page=='main', t('menu.main'), :main, :remote=>true, :class=>'selected') do
@@ -48,9 +52,6 @@
 				end%>
 			</li>
 		</ul>
-	</nav>
-	<div id='notices'>
-		<%= notice %>
 	</div>
 	<div id='content'>
 		<%= yield %>
@@ -59,8 +60,13 @@
 	<footer>
 		<div id='footer'>
 			<%=t 'footer.copyright' %>
-			<%=link_to t('footer.login'), :new_user_session %>
-			<%=link_to t('footer.logout'), :destroy_user_session, :method=>:delete%>
+			<br/><br/>
+			<%=link_to_if(current_user.nil?, t('footer.login'), :new_user_session) do 
+				link_to t('footer.logout')+' ('+current_user.email+')', :destroy_user_session, :method=>:delete 
+			end%>
+
+			<%= link_to t('users.list'), :users_path %>
+
 		</div>
 	</footer>
 	

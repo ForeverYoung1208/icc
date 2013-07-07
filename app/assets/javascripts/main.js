@@ -14,8 +14,8 @@ $(document).ready(function(){
 
 
 	$('#menu a').on("click", function(event){
-		event.preventDefault();
-		$('#content').hide('fade')
+		$('#notice').hide('fade');
+		$('#content').hide('fade');
 		$('#menu').find('a').removeClass('selected',300);
 		$(this).css({'background-color':'#F2C2C2'});
 		$(this).addClass('selected',300);

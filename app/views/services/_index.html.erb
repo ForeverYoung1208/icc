@@ -13,9 +13,8 @@
         <h3><%=raw( sanitize( service.name( I18n.locale ) ) )%></h3>
         <div class="service_text"><%=raw( sanitize( service.text( I18n.locale ) ) )%></div>
         <p class="links">
-          <%= link_to 'Show', service %> |
-          <%= link_to 'Edit', edit_service_path(service) %> |
-          <%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= admin_link_to service.section, t('sevices.edit'), edit_service_path(service) %> 
+          <%= admin_link_to service.section, t('services.destroy'), service, method: :delete, data: { confirm: 'Are you sure?' } %>
         </p>
       </li>
     </ul>
@@ -29,4 +28,4 @@
 
 <br />
 
-<%= link_to 'New Service', new_service_path %>
+<%= link_to t('services.new'), new_service_path if current_user%>
