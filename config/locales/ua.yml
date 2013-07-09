@@ -1,4 +1,8 @@
 ua:
+  Edit: "Редагувати"
+  Destroy: "Видалити"
+  Are_you_sure?: "Ви впевнені?"
+  admin_section: "Адміністративний розділ"
   time:
     formats:
       default: "%HH:%MM"
@@ -39,3 +43,9 @@ ua:
   service:
     new_header: "Нова послуга"
     new_back: "Назад"
+
+  user_sections:
+    u-list: "Всі доступні користувачі"
+    s-list: "Всі розділи"
+    us-list: "Права користувачів на редагування роздідів"
+    new_us: "Нове право користувача"

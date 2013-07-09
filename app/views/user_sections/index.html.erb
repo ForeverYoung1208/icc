@@ -1,25 +1,50 @@
-<h1>Listing user_sections</h1>
+<div id = 'us'>
+  <table>
+    <tr>
+      <th><%= t 'user_sections.u-list' %></th>
+    </tr>
 
-<table>
-  <tr>
-    <th>User</th>
-    <th>Section</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+    <% User.all.each do |user| %>
+      <tr>
+        <td><%= user.email %></td>
+      </tr>
+    <% end %>
+  </table>
 
-<% @user_sections.each do |user_section| %>
-  <tr>
-    <td><%= user_section.user.email %></td>
-    <td><%= t user_section.section.name %></td>
-    <td><%= link_to 'Show', user_section %></td>
-    <td><%= link_to 'Edit', edit_user_section_path(user_section) %></td>
-    <td><%= link_to 'Destroy', user_section, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
 
-<br />
+  <table>
+    <tr>
+      <th><%= t 'user_sections.s-list' %></th>
+    </tr>
 
-<%= link_to 'New User section', new_user_section_path %>
+    <% Section.all.each do |section| %>
+      <tr>
+        <td><%= t section.name %></td>
+      </tr>
+    <% end %>
+  </table>
+
+
+  <h1><%= t 'user_sections.us-list' %></h1>
+  <table>
+    <tr>
+      <th><%= t 'user_sections.user' %></th>
+      <th><%= t 'user_sections.section' %></th>
+      <th></th>
+      <th></th>
+    </tr>
+
+  <% @user_sections.each do |user_section| %>
+    <tr>
+      <td><%= user_section.user.email %></td>
+      <td><%= t user_section.section.name %></td>
+      <td><%= link_to t('Edit'), edit_user_section_path(user_section) %></td>
+      <td><%= link_to t('Destroy'), user_section, method: :delete, data: { confirm: t('Are_you_sure?') } %></td>
+    </tr>
+  <% end %>
+  </table>
+
+  <br />
+
+  <%= link_to t('user_sections.new_us'), new_user_section_path %>
+</div>
