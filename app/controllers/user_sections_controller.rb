@@ -1,4 +1,5 @@
 class UserSectionsController < ApplicationController
+  before_filter :is_logged_in
   # GET /user_sections
   # GET /user_sections.json
   def index
@@ -82,4 +83,11 @@ class UserSectionsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  private
+    def is_logged_in
+    if current_user.nil?
+      redirect_to request.referer, :notice => "sercices_new_error: You are not logged in "
+    end
+  end
+
 end

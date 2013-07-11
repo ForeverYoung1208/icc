@@ -14,8 +14,6 @@
   <div class="field">
     <%= f.label :user %><br />
     <%= f.collection_select( :user, User.all, :id, :email ) %>
-    <%= link_to t('users.new'), new_user_registration_path %>
-
   </div>
   <div class="field">
     <%= f.label :section %><br />
