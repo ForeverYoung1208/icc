@@ -1,5 +1,6 @@
 class UserSectionsController < ApplicationController
-  before_filter :is_logged_in
+  before_filter :authenticate_user!
+  before_filter :is_admin
   # GET /user_sections
   # GET /user_sections.json
   def index
@@ -84,10 +85,12 @@ class UserSectionsController < ApplicationController
     end
   end
   private
-    def is_logged_in
-    if current_user.nil?
-      redirect_to request.referer, :notice => "sercices_new_error: You are not logged in "
+
+  def is_admin
+    if !current_user.admin?
+      redirect_to request.referer, :notice => "sercices_new_error: You are not allowed to acces admin section"
     end
   end
+
 
 end

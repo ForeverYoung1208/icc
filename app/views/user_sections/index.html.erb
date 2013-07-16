@@ -9,9 +9,6 @@
         <td><%= user.email %></td>
       </tr>
     <% end %>
-      <tr>
-        <td><%= link_to t('user_sections.new_user'), root_path %></td>
-      </tr>
   </table>
 
 
@@ -34,14 +31,12 @@
       <th><%= t 'user_sections.user' %></th>
       <th><%= t 'user_sections.section' %></th>
       <th></th>
-      <th></th>
     </tr>
 
   <% @user_sections.each do |user_section| %>
     <tr>
       <td><%= user_section.user.email %></td>
       <td><%= t user_section.section.name %></td>
-      <td><%= link_to t('Edit'), edit_user_section_path(user_section) %></td>
       <td><%= link_to t('Destroy'), user_section, method: :delete, data: { confirm: t('Are_you_sure?') } %></td>
     </tr>
   <% end %>

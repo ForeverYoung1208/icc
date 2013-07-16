@@ -1,6 +1,6 @@
 class ServicesController < ApplicationController
   before_filter :set_selected_page
-  before_filter :is_logged_in, :only=>[:new, :create]
+  before_filter :authenticate_user!, :only=>[:edit, :update, :new, :create]
   before_filter :is_redactor, :except=>[:index, :new, :create]
   # GET /services
   # GET /services.json
@@ -101,13 +101,7 @@ class ServicesController < ApplicationController
     service = Service.find(params[:id])
     if (current_user.nil? or not(current_user.redactor?( service.section )) )
       
-      redirect_to request.referer, :notice => "services_edit_error: You are not the redactor for section '#{service.section.name}'"
-    end
-  end
-
-  def is_logged_in
-    if current_user.nil?
-      redirect_to request.referer, :notice => "sercices_new_error: You are not logged in "
+      redirect_to request.referer, :notice => "services_edit_error: You are not redactor for the section '#{t service.section.name}'"
     end
   end
 

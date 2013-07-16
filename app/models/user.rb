@@ -13,7 +13,19 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
 
   def redactor?( section )
+    raise 'no section given' if section.nil?
     self.sections.include?( section )
+  end
+
+  def admin?
+    #take all uniq sections
+    all_sections=Section.all.to_a.uniq
+
+    #subtract from all uniq sections wtih current user's sections
+    all_sections - self.sections == []
+
+    #he is admin if all existing sections removed by current user's sections
+
   end
 
 end
