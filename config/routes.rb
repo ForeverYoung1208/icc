@@ -1,7 +1,8 @@
 Icc::Application.routes.draw do
-  
+
   resources :user_sections
   get "user/reset_u_pwd" => "user_sections#reset_u_pwd", :as => :reset_u_pwd
+
 
   devise_for :users
 
@@ -13,7 +14,8 @@ Icc::Application.routes.draw do
 
 
   get "main" => 'main#index', :as=>:main
-
+  get "main/set_locale" => "main#set_locale", :as => :set_locale
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

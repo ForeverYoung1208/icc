@@ -209,7 +209,12 @@ div#content{
 	width: 100%;
 	border-top: 1px solid red;
 	text-align: center;
+	a{
+		margin: 5px;
+	}
 	.admin_section{
+		margin-top: 10px;
+		font-size: small;
 
 	}
 }

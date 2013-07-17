@@ -28,7 +28,13 @@
 
 	<%= content_tag( :div, notice, :id=>'notice') if !notice.nil? %>
 
-	<div id='lang-selector'><span><a href="#">ru</a>|<a href="#">en</a>|<a href="#">ua</a></span></div>
+	<div id='lang-selector'>
+		<span>
+			<%= link_to 'ua', set_locale_path %>|
+			<a href="#">en</a>|
+			<a href="#">ru</a>
+		</span>
+	</div>
 
 	<div id='nav'>
 		<ul id='menu'>
@@ -63,14 +69,12 @@
 	<footer>
 		<div id='footer'>
 			<%=t 'footer.copyright' %>
-			<br/><br/>
-			<%=link_to_if(current_user.nil?, t('footer.login'), :new_user_session) do 
-				link_to t('footer.logout')+' ('+current_user.email+')', :destroy_user_session, :method=>:delete 
-			end%>
-			<br/><br/>
-
-			<%= link_to t('admin_section'), :user_sections, class: "admin_section" if !current_user.nil?&&current_user.admin?%>
-
+			<div class='admin_section'>
+				<%= link_to t('admin_section'), :user_sections if !current_user.nil?&&current_user.admin?%>
+				<%=link_to_if(current_user.nil?, t('footer.login'), :new_user_session) do 
+					link_to t('footer.logout')+' ('+current_user.email+')', :destroy_user_session, :method=>:delete 
+				end%>
+			</div>
 		</div>
 	</footer>
 	
