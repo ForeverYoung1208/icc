@@ -2,11 +2,15 @@
   <table>
     <tr>
       <th><%= t 'user_sections.u-list' %></th>
+      <th></th>
+      <th></th>
     </tr>
 
     <% User.all.each do |user| %>
       <tr>
         <td><%= user.email %></td>
+        <td><%= link_to t('user_sections.reset_user_password'), reset_u_pwd_path %></td>
+        <td>удалить</td>
       </tr>
     <% end %>
   </table>

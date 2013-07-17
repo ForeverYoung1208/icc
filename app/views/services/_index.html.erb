@@ -15,8 +15,8 @@
         <h3><%=raw( sanitize( service.name( I18n.locale ) ) )%></h3>
         <div class="service_text"><%=raw( sanitize( service.text( I18n.locale ) ) )%></div>
         <p class="links">
-          <%= admin_link_to service.section, t('sevices.edit'), edit_service_path(service) %> 
-          <%= admin_link_to service.section, t('services.destroy'), service, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= admin_link_to service.section, t('services.edit'), edit_service_path(service) %> 
+          <%= admin_link_to service.section, t('services.destroy'), service, method: :delete, data: { confirm: t('Are_you_sure?') } %>
         </p>
       </li>
     </ul>

@@ -1,3 +1,4 @@
+#encoding utf-8
 class UserSectionsController < ApplicationController
   before_filter :authenticate_user!
   before_filter :is_admin
@@ -47,7 +48,7 @@ class UserSectionsController < ApplicationController
     
     respond_to do |format|
       if user.save
-        format.html { redirect_to user_sections_path, notice: 'User-section was successfully created.' }
+        format.html { redirect_to user_sections_path, notice: t('user_sections.successfully_created') }
 #        format.json { render json: @user_section, status: :created, location: @user_section }
       else
         format.html { render action: "new" }
@@ -64,7 +65,7 @@ class UserSectionsController < ApplicationController
 
     respond_to do |format|
       if @user_section.update_attributes(params[:user_section])
-        format.html { redirect_to @user_section, notice: 'User section was successfully updated.' }
+        format.html { redirect_to @user_section, notice: t('user_sections.successfully_updated')}
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -84,11 +85,18 @@ class UserSectionsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def reset_u_pwd
+    redirect_to root_path, :notice => t('user_sections.password_reseted')
+
+  end
+
+
   private
 
   def is_admin
     if !current_user.admin?
-      redirect_to request.referer, :notice => "sercices_new_error: You are not allowed to acces admin section"
+      redirect_to request.referer, :notice => t('user_sections.not_allowed')
     end
   end
 
