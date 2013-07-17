@@ -9,6 +9,10 @@ before_filter :set_locale
 		end
 	end
 
+	def set_locale
+		session['locale']=params['locale']||'ua'
+	  	
+	end
 
 private
 
@@ -16,9 +20,6 @@ private
 	  	@selected_page = 'main'
 	end
 
-	def set_locale
-		session['locale']=params['locale']||'ua'
-	end
 
 #	def set_user_language
 #	  	I18n.locale = session[:locale]||'ua'

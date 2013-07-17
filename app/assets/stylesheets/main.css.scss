@@ -65,6 +65,7 @@ a:hover, a:active, a:focus {
 	#name {
 		margin-left: $logo-distantion;
 		width: 960px - $logo-width - $debug-color-width * 2 - $logo-distantion;
+		height: $logo-height;
 		display: inline-block;
 		text-transform: uppercase;
 		color: $tile-color-4;
