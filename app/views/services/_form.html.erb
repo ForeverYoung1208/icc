@@ -12,7 +12,7 @@
   <% end %>
 
   <%= t 'services.editing.section' %>
-  <%= f.collection_select( :section_id, Section.all, :id, :name_int ) %>
+  <%= f.collection_select( :section_id, current_user.sections.all, :id, :name_int ) %>
   <br/>
   <%= f.label 'Український, назва:' %>
   <%= f.text_field :name_ua %><br/>

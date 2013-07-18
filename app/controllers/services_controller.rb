@@ -54,7 +54,7 @@ class ServicesController < ApplicationController
 
     respond_to do |format|
       if @service.save
-        format.html { redirect_to @service, notice: t('services.successfully_created') }
+        format.html { redirect_to services_url, notice: t('services.successfully_created') }
         format.json { render json: @service, status: :created, location: @service }
       else
         format.html { render action: "new" }
