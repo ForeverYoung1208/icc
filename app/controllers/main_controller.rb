@@ -1,6 +1,6 @@
 class MainController < ApplicationController
 before_filter :set_selected_page
-before_filter :set_locale
+#before_filter :set_locale
 #before_filter :set_user_language
 	def index
 		respond_to do |format|
@@ -11,7 +11,7 @@ before_filter :set_locale
 
 	def set_locale
 		session['locale']=params['locale']||'ua'
-	  	
+	  	redirect_to root_path
 	end
 
 private

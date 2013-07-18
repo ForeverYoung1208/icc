@@ -2,6 +2,10 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  Edit: "Edit"
+  Destroy: "Destroy"
+  Are_you_sure?: "Are you sure?"
+  admin_section: "Administrative Section"
   time:
     formats:
       default: "%HH:%MM"
@@ -9,7 +13,44 @@ en:
     formats:
       default: "%DD.%MM.%YYYY"
   menu:
-    main: "Main"
+    main: "Home"
     services: "Services"
     news: "News"
     contacts: "Contacts"
+
+  tiles:
+    t11: "Center of Investment Consulting - is primarily a team of professionals."
+    t12: "A person can not truly improve, if he does not help others to improve. <p> Charles Dickens </ p>"
+    t21: "Consulting on professional stock market activity."
+    t22: "Consulting on investment technologies."
+    t23: "Consulting on Corporate Governance"
+    t31: "News on the stock market"
+    t32: "Partners and Clients"
+    t33: "Contacts"
+  footer:
+    copyright: "The site made ин ICC Ltd."
+    login: "Editor login"
+    logout: "Editor logout"
+
+  services:
+    header: "Services provided by the company"
+    edit_header: "Editing Services"
+    show: "Show"
+    back: "Back"
+    save: "Save"
+    edit: "Edit"
+    destroy: "Destroy"
+    new: "New service"
+    editing:
+      section: "The service belongs to the section:"
+
+  service:
+    new_header: "New service"
+    new_back: "Back"
+
+  user_sections:
+    u-list: "All available users"
+    s-list: "All sections"
+    us-list: "User rights for editing partitions"
+    new_us: "New user permission"
+    new_user: "New user"

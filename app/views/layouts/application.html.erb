@@ -30,9 +30,9 @@
 
 	<div id='lang-selector'>
 		<span>
-			<%= link_to 'ua', set_locale_path %>|
-			<a href="#">en</a>|
-			<a href="#">ru</a>
+			<%= link_to 'ua', set_locale_path(locale: 'ua') %>|
+			<%= link_to 'en', set_locale_path(locale: 'en') %>|
+			<%= link_to 'ru', set_locale_path(locale: 'ru') %>
 		</span>
 	</div>
 
