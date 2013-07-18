@@ -38,7 +38,8 @@ ua:
     edit: "Редагувати"
     destroy: "Видалити"
     new: "Нова послуга"
-    successfully_created: "Новий сервіс створено успішно"
+    successfully_created: "Нова послуга створена успішно"
+    successfully_updated: "Послуга успішно оновлена"
     editing:
       section: "Послуга належить до розділу:"
 

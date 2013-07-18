@@ -38,7 +38,8 @@ ru:
     edit: "Редактировать"
     destroy: "Удалить"
     new: "Новая услуга"
-    successfully_created: "Новый сервис создан успешно"
+    successfully_created: "Новая услуга создана успешно"
+    successfully_updated: "Услуга успешно обновлен"
     editing:
       section: "Услуга относится к разделу:"
 

@@ -39,6 +39,7 @@ en:
     destroy: "Destroy"
     new: "New service"
     successfully_created: "New service created succefully"
+    successfully_updated: "Service successfully updated"    
     editing:
       section: "The service belongs to the section:"
 
