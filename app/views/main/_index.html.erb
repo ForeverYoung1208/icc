@@ -1,42 +1,51 @@
 
 	<div class="row"> 
-		<div class="tile" id="t11">
-			<div><%=t('tiles.t11') %></div>
-		</div>
-		<div class="tile" id="t12">
+		<%= link_to main_path, {:remote=> true, class: 'tile', id: 't11'} do %>
+			<div><%=t 'tiles.t11'%></div>
+		<%end%>
+
+		<%= link_to main_path, {:remote=> true, class: 'tile', id: 't12'} do %>
 			<div><%=raw t('tiles.t12')%></div>
-		</div>
-		<div class="tile" id="t13">
+		<%end%>
+
+
+		<%= link_to main_path, {:remote=> true, class: 'tile', id: 't13'} do %>
 			<%= image_tag '13-200x150.png'%>
-			<div>
-			</div>
-		</div>
+		<%end%>
 	</div>
+
+
 	<div class="row"> 
-		<div class="tile" id="t21">
+		<%= link_to services_path, {:remote=> true, class: 'tile', id: 't21'} do %>
 			<%= image_tag '21-200x150.png'%>
 			<div><%=t 'tiles.t21'%></div>
-		</div>
-		<div class="tile" id="t22">
+		<%end%>
+
+		<%= link_to services_path, {:remote=> true, class: 'tile', id: 't22'} do %> 
 			<%= image_tag '22-200x150.png'%>
 			<div><%=t 'tiles.t22'%></div>
-		</div>
-		<div class="tile" id="t23">
+		<%end%>
+
+		<%= link_to services_path, {:remote=> true, class: 'tile', id: 't23'} do %> 
 			<%= image_tag '23-200x150.png'%>
 			<div><%=t 'tiles.t23'%></div>
-		</div>
+		<%end%>
 	</div>
+
+
 	<div class="row"> 
-		<div class="tile" id="t31">
+		<%= link_to main_path, {:remote=> true, class: 'tile', id: 't31'} do %>
 			<%= image_tag '31-200x152.png'%>
 			<div><%=t 'tiles.t31'%></div>
-		</div>
-		<div class="tile" id="t32">
+		<%end%>
+
+		<%= link_to main_path, {:remote=> true, class: 'tile', id: 't32'} do %> 
 			<%= image_tag '32-200x150.png'%>
 			<div><%=t 'tiles.t32'%></div>
-		</div>
-		<div class="tile" id="t33">
+		<%end%>
+
+		<%= link_to main_path, {:remote=> true, class: 'tile', id: 't33'} do %> 
 			<%= image_tag '33-195x215.png'%>
 			<div><%=t 'tiles.t33'%></div>
-		</div>
+		<%end%>
 	</div>
