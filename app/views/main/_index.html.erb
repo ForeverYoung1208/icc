@@ -16,19 +16,19 @@
 
 
 	<div class="row"> 
-		<%= link_to services_path, {:remote=> true, class: 'tile', id: 't21'} do %>
+		<%= link_to services_path(selected_section: @sections[0].id), :remote=> true, class: 'tile', id: 't21' do %>
 			<%= image_tag '21-200x150.png'%>
-			<div><%=t 'tiles.t21'%></div>
+			<div><%= @sections[0].name_int %></div>
 		<%end%>
 
-		<%= link_to services_path, {:remote=> true, class: 'tile', id: 't22'} do %> 
+		<%= link_to services_path(selected_section: @sections[1].id), :remote=> true, class: 'tile', id: 't22' do %> 
 			<%= image_tag '22-200x150.png'%>
-			<div><%=t 'tiles.t22'%></div>
+			<div><%= @sections[1].name_int %></div>
 		<%end%>
 
-		<%= link_to services_path, {:remote=> true, class: 'tile', id: 't23'} do %> 
+		<%= link_to services_path(selected_section: @sections[2].id), :remote=> true, class: 'tile', id: 't23' do %> 
 			<%= image_tag '23-200x150.png'%>
-			<div><%=t 'tiles.t23'%></div>
+			<div><%= @sections[2].name_int %></div>
 		<%end%>
 	</div>
 

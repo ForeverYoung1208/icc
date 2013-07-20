@@ -18,9 +18,6 @@ en:
   tiles:
     t11: "Center of Investment Consulting - is primarily a team of professionals."
     t12: "A person can not truly improve, if he does not help others to improve. <p> Charles Dickens </ p>"
-    t21: "Consulting on professional stock market activity."
-    t22: "Consulting on investment technologies."
-    t23: "Consulting on Corporate Governance"
     t31: "News on the stock market"
     t32: "Partners and Clients"
     t33: "Contacts"
@@ -63,3 +60,10 @@ en:
       user:
         signed_in "User login is successful"
 
+  activerecord:
+    errors:
+      models:
+        service:
+          attributes:
+            section:
+              blank: ": The service must be associated with section!"

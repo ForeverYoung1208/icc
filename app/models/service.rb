@@ -1,6 +1,7 @@
 class Service < ActiveRecord::Base
 	attr_accessible :name_ua, :text_ua, :name_en, :text_en, :name_ru, :text_ru, :section_id
 	belongs_to :section
+	validates :section, :presence => true
 
 	def name(locale)
 		begin

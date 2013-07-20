@@ -7,7 +7,8 @@ class ServicesController < ApplicationController
   def index
     @groups_services = {}
     @sections = Section.all
-    
+    @selected_section = params['selected_section']
+
     @sections.each do |section|
       services = Service.where(section_id: section.id)
       @groups_services[section] = services if services.length > 0

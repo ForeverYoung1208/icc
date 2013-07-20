@@ -3,6 +3,7 @@ before_filter :set_selected_page
 #before_filter :set_locale
 #before_filter :set_user_language
 	def index
+		@sections=Section.all
 		respond_to do |format|
 			format.html # index.html.erb
 			format.js {}
