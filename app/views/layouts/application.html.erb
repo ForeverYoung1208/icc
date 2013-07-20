@@ -39,25 +39,25 @@
 	<div id='nav'>
 		<ul id='menu'>
 			<li>
-				<%=link_to_if(@selected_page=='main', t('menu.main'), :main, :remote=>true, :class=>'selected') do
-					link_to( t('menu.main'), :main, :remote=>true)
+				<%=link_to_if(@selected_page=='main', t('menu.main'), :main, :remote=>true, :class=>'selected', id: 'main') do
+					link_to( t('menu.main'), :main, :remote=>true, id: 'main')
 				end%>
 			</li>
 
 			<li>
-				<%=link_to_if(@selected_page=='services', t('menu.services'), :services, :remote=>true, :class=>'selected') do
-					link_to( t('menu.services'), :services, :remote=>true)
+				<%=link_to_if(@selected_page=='services', t('menu.services'), :services, :remote=>true, :class=>'selected', id: 'services') do
+					link_to( t('menu.services'), :services, :remote=>true, id: 'services')
 				end%>
 			</li>
 
 			<li>
-				<%=link_to_if(@selected_page=='news', t('menu.news'), :newses, :remote=>true, :class=>'selected') do
-					link_to( t('menu.news'), :newses, :remote=>true)
+				<%=link_to_if(@selected_page=='news', t('menu.news'), :newses, :remote=>true, :class=>'selected', id: 'newses') do
+					link_to( t('menu.news'), :newses, :remote=>true, id: 'newses')
 				end%>
 			</li>
 			<li>
-				<%=link_to_if(@selected_page=='contacts', t('menu.contacts'), :contacts, :remote=>true, :class=>'selected') do
-					link_to( t('menu.contacts'), :contacts, :remote=>true)
+				<%=link_to_if(@selected_page=='contacts', t('menu.contacts'), :contacts, :remote=>true, :class=>'selected', id: 'contacts') do
+					link_to( t('menu.contacts'), :contacts, :remote=>true, id: 'contacts')
 				end%>
 			</li>
 		</ul>
