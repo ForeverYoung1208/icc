@@ -1,5 +1,8 @@
 $('#content').hide('fade', function(){
-	$('#content').html("<%= escape_javascript(render('index')) %>").show('fade');
+	$('#content').html("<%= escape_javascript(render('index')) %>").show('fade', function (){
+		stopLoadingAnimation()
+	});
+
 	setupTileBehavior();
 });
 
