@@ -1,17 +1,27 @@
 class NewsesController < ApplicationController
-  before_filter :set_selected_page  # GET /newses
+  before_filter :set_selected_page
+  before_filter :authenticate_user!, :only=>[:edit, :update, :new, :create]
+  before_filter :is_redactor, :except=>[:index, :new, :create]
   # GET /newses.json
   def index
-    @newses = Newse.all
+    @groups_newses = {}
+    @sections = Section.all
+
+    @sections.each do |section|
+      newses = Newse.where(section_id: section.id)
+      @groups_newses[section] = newses if newses.length > 0
+    end
 
     respond_to do |format|
       format.html # index.html.erb
+      format.js {}
       format.json { render json: @newses }
     end
   end
 
   # GET /newses/1
   # GET /newses/1.json
+
   def show
     @newse = Newse.find(params[:id])
 

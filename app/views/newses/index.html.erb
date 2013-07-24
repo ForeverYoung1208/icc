@@ -1,21 +1,2 @@
-<h1>Listing newses</h1>
+<%= render('index') %>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @newses.each do |newse| %>
-  <tr>
-    <td><%= link_to 'Show', newse %></td>
-    <td><%= link_to 'Edit', edit_newse_path(newse) %></td>
-    <td><%= link_to 'Destroy', newse, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Newse', new_newse_path %>

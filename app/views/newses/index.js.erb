@@ -1,0 +1,12 @@
+$('#content').hide('fade', function(){
+	$('#content').html("<%= escape_javascript(render('index')) %>");
+});
+
+$('#content').show('fade',function() {
+	stopLoadingAnimation();
+	<% if !@selected_section.nil? %>
+		$.scrollTo('.section_name#<%= @selected_section %>', 500)
+	<% end %>
+});
+
+$('a#newses').addClass('selected',300);

@@ -2,29 +2,29 @@
 
 <% @groups_services.each do |section, services| %>
 
-<ul class="section_name" id="<%= section.id %>">
-  <li>
-    <%= image_tag 'handy-icon_01.png' %>
+  <ul class="section_name" id="<%= section.id %>">
+    <li>
+      <%= image_tag 'handy-icon_01.png' %>
 
-    <h2><%=t( section.name )%></h2>
+      <h2><%=t( section.name )%></h2>
 
-    <% services.each do |service| %>
+      <% services.each do |service| %>
 
-    <ul class="service">
-      <li>
-        <h3><%=raw( sanitize( service.name( I18n.locale ) ) )%></h3>
-        <div class="service_text"><%=raw( sanitize( service.text( I18n.locale ) ) )%></div>
-        <p class="links">
-          <%= admin_link_to service.section, t('services.edit'), edit_service_path(service) %> 
-          <%= admin_link_to service.section, t('services.destroy'), service, method: :delete, data: { confirm: t('Are_you_sure?') } %>
-        </p>
-      </li>
-    </ul>
+      <ul class="service">
+        <li>
+          <h3><%=raw( sanitize( service.name( I18n.locale ) ) )%></h3>
+          <div class="service_text"><%=raw( sanitize( service.text( I18n.locale ) ) )%></div>
+          <p class="links">
+            <%= admin_link_to service.section, t('services.edit'), edit_service_path(service) %> 
+            <%= admin_link_to service.section, t('services.destroy'), service, method: :delete, data: { confirm: t('Are_you_sure?') } %>
+          </p>
+        </li>
+      </ul>
 
-    <% end %>
+      <% end %>
 
-  </li>
-</ul>
+    </li>
+  </ul>
 
 <% end %>
 
