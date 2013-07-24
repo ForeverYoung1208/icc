@@ -4,13 +4,17 @@ class NewsesController < ApplicationController
   before_filter :is_redactor, :except=>[:index, :new, :create]
   # GET /newses.json
   def index
+=begin    
     @groups_newses = {}
     @sections = Section.all
+
 
     @sections.each do |section|
       newses = Newse.where(section_id: section.id)
       @groups_newses[section] = newses if newses.length > 0
     end
+=end
+    @newses=Newse.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -54,7 +58,7 @@ class NewsesController < ApplicationController
 
     respond_to do |format|
       if @newse.save
-        format.html { redirect_to @newse, notice: 'Newse was successfully created.' }
+        format.html { redirect_to newses_path, notice: t('newses.successfully_created') }
         format.json { render json: @newse, status: :created, location: @newse }
       else
         format.html { render action: "new" }
@@ -70,7 +74,7 @@ class NewsesController < ApplicationController
 
     respond_to do |format|
       if @newse.update_attributes(params[:newse])
-        format.html { redirect_to @newse, notice: 'Newse was successfully updated.' }
+        format.html { redirect_to newses_path, notice: t('services.successfully_updated') }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -95,5 +99,13 @@ class NewsesController < ApplicationController
   def set_selected_page
       @selected_page = 'news'
   end
+
+  def is_redactor
+    newse = Newse.find(params[:id])
+    if (current_user.nil? or not(current_user.redactor?( newse.section )) )
+      redirect_to request.referer, :notice =>( t('newses.not_allowed')+' '+t(newse.section.name) )
+    end
+  end
+
 
 end

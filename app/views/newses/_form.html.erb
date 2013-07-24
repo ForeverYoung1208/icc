@@ -11,7 +11,27 @@
     </div>
   <% end %>
 
+  <%= t 'newses.editing.section' %>
+  <%= f.collection_select( :section_id, current_user.sections.all, :id, :name_int ) %>
+  <br/>
+  <%= f.label 'Український, назва:' %>
+  <%= f.text_field :name_ua %><br/>
+  <%= f.label 'зміст:' %>
+  <%= f.text_area :text_ua, :class => "text_area" %>
+  <br/>
+  <%= f.label 'English, name:' %>
+  <%= f.text_field :name_en %><br/>
+  <%= f.label 'content' %>
+  <%= f.text_area :text_en, :class => "text_area" %>
+  <br/>
+  <%= f.label 'Русский, название:' %>
+  <%= f.text_field :name_ru %><br/>
+    <%= f.label 'содержание' %>
+  <%= f.text_area :text_ru, :class => "text_area" %>
+  <br/>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit t('newses.save')%>
   </div>
+
 <% end %>

@@ -44,6 +44,24 @@ ru:
     new_header: "Новая услуга"
     new_back: "Назад"
 
+  newses:
+    header: "Новости"
+    edit_header: "Редактирование новостей"
+    show: "Показать"
+    back: "Назад"
+    save: "Сохранить"
+    edit: "Редактировать"
+    destroy: "Удалить"
+    new: "Добавить новость"
+    successfully_created: "Новость создана успешно"
+    successfully_updated: "Новость успешно обновлена​​"
+    editing:
+      section: "Новость относится к разделу:"
+     
+  newse:
+    new_header: "Добавить новость"
+    new_back: "Назад"      
+
   user_sections:
     u-list: "Все доступные пользователи"
     s-list: "Все разделы"

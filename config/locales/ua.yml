@@ -3,12 +3,15 @@ ua:
   Destroy: "Видалити"
   Are_you_sure?: "Ви впевнені?"
   admin_section: "Адміністративний розділ"
+
   time:
     formats:
       default: "%HH:%MM"
+
   date:
     formats:
       default: "%DD.%MM.%YYYY"
+
   menu:
     main: "Головна"
     services: "Послуги"
@@ -21,6 +24,7 @@ ua:
     t31: "Новини на Фондовому ринку"
     t32: "Партнери та клієнти"
     t33: "Контакти"
+
   footer:
     copyright: "Сайт виготовлено ТОВ 'ЦІК'"
     login: "вхід редактора"
@@ -39,6 +43,25 @@ ua:
     successfully_updated: "Послуга успішно оновлена"
     editing:
       section: "Послуга належить до розділу:"
+
+  newses:
+    header: "Новини"
+    edit_header: "Редагування новин"
+    show: "Показати"
+    back: "Назад"
+    save: "Зберегти"
+    edit: "Редагувати"
+    destroy: "Видалити"
+    new: "Додати новини"
+    successfully_created: "Новина створена успішно"
+    successfully_updated: "Новина успішно оновлена"
+    editing:
+      section: "Новина належить до розділу:"      
+      
+  newse:
+    new_header: "Додати новину"
+    new_back: "Назад"
+
 
   service:
     new_header: "Нова послуга"

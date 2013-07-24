@@ -2,7 +2,6 @@ class ServicesController < ApplicationController
   before_filter :set_selected_page
   before_filter :authenticate_user!, :only=>[:edit, :update, :new, :create]
   before_filter :is_redactor, :except=>[:index, :new, :create]
-  # GET /services
   # GET /services.json
   def index
     @groups_services = {}
@@ -23,6 +22,7 @@ class ServicesController < ApplicationController
 
   # GET /services/1
   # GET /services/1.json
+
   def show
     @service = Service.find(params[:id])
 

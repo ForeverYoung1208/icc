@@ -1,27 +1,16 @@
 <h1 class="header"><%=t 'newses.header' %></h1>
 
-<% @groups_newses.each do |section, newses| %>
+<% @newses.each do |newse| %>
 
-  <ul class="section_name" id="<%= section.id %>">
+  <ul class="section_name">  
     <li>
       <%= image_tag 'handy-icon_01.png' %>
-
-      <h2><%=t( section.name )%></h2>
-
-      <% newses.each do |newse| %>
-
-      <ul class="newse">
-        <li>
-          <h3><%=raw( sanitize( newse.name( I18n.locale ) ) )%></h3>
-          <div class="newse_text"><%=raw( sanitize( newse.text( I18n.locale ) ) )%></div>
-          <p class="links">
-            <%= admin_link_to newse.section, t('newses.edit'), edit_newse_path(newse) %> 
-            <%= admin_link_to newse.section, t('newses.destroy'), newse, method: :delete, data: { confirm: t('Are_you_sure?') } %>
-          </p>
-        </li>
-      </ul>
-
-      <% end %>
+      <h3><%=raw( sanitize( newse.name( I18n.locale ) ) )%></h3>
+      <div class="newse_text"><%=raw( sanitize( newse.text( I18n.locale ) ) )%></div>
+      <p class="links">
+        <%= admin_link_to newse.section, t('newses.edit'), edit_newse_path(newse) %> 
+        <%= admin_link_to newse.section, t('newses.destroy'), newse, method: :delete, data: { confirm: t('Are_you_sure?') } %>
+      </p>
 
     </li>
   </ul>

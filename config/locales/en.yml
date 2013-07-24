@@ -44,6 +44,26 @@ en:
     new_header: "New service"
     new_back: "Back"
 
+
+  newses:
+    header: "News"
+    edit_header: "Edit News"
+    show: "Show"
+    back: "Back"
+    save: "Save"
+    edit: "Edit"
+    destroy: "Remove"
+    new: "Submit your news"
+    successfully_created: "The news created successfully"
+    successfully_updated: "The news has been successfully updated"
+    editing:
+      section: "The news section refers to:"
+     
+  newse:
+    new_header: "Submit News"
+    new_back: "Back"
+
+
   user_sections:
     u-list: "All available users"
     s-list: "All sections"
