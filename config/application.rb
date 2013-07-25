@@ -60,8 +60,14 @@ module Icc
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
-    config.action_view.sanitized_allowed_tags = 'p', 'b', 'div', 'span', 'font','u', 'a'
+=begin
+А  этоот кусок перестал работать (он почему - то игнорируется,странно! ), поэтому вынес в initializers\sanitize.rb
+там работает.
+
+    config.action_view.sanitized_allowed_tags = 'p', 'b', 'div', 'span', 'font', 'u', 'a'
     config.action_view.sanitized_allowed_attributes = 'id', 'class', 'style', 'size', 'face', 'color', 'target', 'href'
+=end
 
   end
+
 end

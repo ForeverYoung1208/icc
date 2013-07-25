@@ -55,6 +55,13 @@
 					link_to( t('menu.news'), :newses, :remote=>true, id: 'newses')
 				end%>
 			</li>
+
+			<li>
+				<%=link_to_if(@selected_page=='partners', t('menu.partners'), :partners, :remote=>true, :class=>'selected', id: 'partners') do
+					link_to( t('menu.partners'), :partners, :remote=>true, id: 'partners')
+				end%>
+			</li>
+
 			<li>
 				<%=link_to_if(@selected_page=='contacts', t('menu.contacts'), :contacts, :remote=>true, :class=>'selected', id: 'contacts') do
 					link_to( t('menu.contacts'), :contacts, :remote=>true, id: 'contacts')

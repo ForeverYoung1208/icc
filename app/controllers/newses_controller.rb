@@ -4,16 +4,6 @@ class NewsesController < ApplicationController
   before_filter :is_redactor, :except=>[:index, :new, :create]
   # GET /newses.json
   def index
-=begin    
-    @groups_newses = {}
-    @sections = Section.all
-
-
-    @sections.each do |section|
-      newses = Newse.where(section_id: section.id)
-      @groups_newses[section] = newses if newses.length > 0
-    end
-=end
     @newses=Newse.all
 
     respond_to do |format|

@@ -14,6 +14,7 @@ ru:
     services: "Услуги"
     news: "Новости"
     contacts: "Контакты"
+    partners: "Партнёры"
 
   tiles:
     t11: "Центр инвестиционного консалтинга - это прежде всего команда профессионалов"
@@ -57,7 +58,25 @@ ru:
     successfully_updated: "Новость успешно обновлена​​"
     editing:
       section: "Новость относится к разделу:"
-     
+
+  partners:
+    header: "Партнеры компании"
+    edit_header: "Редактирование партнеров"
+    show: "Показать"
+    back: "Назад"
+    save: "Сохранить"
+    edit: "Редактировать"
+    destroy: "Удалить"
+    new: "Новый партнер"
+    successfully_created: "Новый партнер создан успешно"
+    successfully_updated: "Партнер успешно обновлен​​"
+    editing:
+      section: "Партнер относится к разделу:"
+
+  partner:
+    new_header: "Новый партнер"
+    new_back: "Назад"     
+
   newse:
     new_header: "Добавить новость"
     new_back: "Назад"      

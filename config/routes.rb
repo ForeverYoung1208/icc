@@ -1,5 +1,8 @@
 Icc::Application.routes.draw do
 
+  resources :partners
+
+
   resources :user_sections
   get "user/reset_u_pwd" => "user_sections#reset_u_pwd", :as => :reset_u_pwd
 

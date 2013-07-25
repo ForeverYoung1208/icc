@@ -14,6 +14,7 @@ en:
     services: "Services"
     news: "News"
     contacts: "Contacts"
+    partners: "Partners"
 
   tiles:
     t11: "Center of Investment Consulting - is primarily a team of professionals."
@@ -58,7 +59,25 @@ en:
     successfully_updated: "The news has been successfully updated"
     editing:
       section: "The news section refers to:"
-     
+
+  partners:
+    header: "Partners"
+    edit_header: "Edit partners"
+    show: "Show"
+    back: "Back"
+    save: "Save"
+    edit: "Edit"
+    destroy: "Remove"
+    new: "New Partner"
+    successfully_created: "The new partner is created successfully"
+    successfully_updated: "Partner successfully updated"
+    editing:
+      section: "partner belongs to the section:"
+
+  partner:
+    new_header: "New Partner"
+    new_back: "Back"
+
   newse:
     new_header: "Submit News"
     new_back: "Back"

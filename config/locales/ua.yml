@@ -3,20 +3,18 @@ ua:
   Destroy: "Видалити"
   Are_you_sure?: "Ви впевнені?"
   admin_section: "Адміністративний розділ"
-
   time:
     formats:
       default: "%HH:%MM"
-
   date:
     formats:
       default: "%DD.%MM.%YYYY"
-
   menu:
     main: "Головна"
     services: "Послуги"
     news: "Новини"
     contacts: "Контакти"
+    partners: "Партнери"
 
   tiles:
     t11: "Центр інвестиційного консалтингу – це перш за все команда професіоналів"
@@ -44,6 +42,11 @@ ua:
     editing:
       section: "Послуга належить до розділу:"
 
+  service:
+    new_header: "Нова послуга"
+    new_back: "Назад"
+
+
   newses:
     header: "Новини"
     edit_header: "Редагування новин"
@@ -62,9 +65,22 @@ ua:
     new_header: "Додати новину"
     new_back: "Назад"
 
+  partners:
+    header: "Партнери компанії"
+    edit_header: "Редагування партнерів"
+    show: "Показати"
+    back: "Назад"
+    save: "Зберегти"
+    edit: "Редагувати"
+    destroy: "Видалити"
+    new: "Новий партнер"
+    successfully_created: "Новий партнер створений успішно"
+    successfully_updated: "Партнер успішно оновлен"
+    editing:
+      section: "Партнер належить до розділу:"
 
-  service:
-    new_header: "Нова послуга"
+  partner:
+    new_header: "Новий партнер"
     new_back: "Назад"
 
   user_sections:

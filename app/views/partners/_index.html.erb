@@ -1,0 +1,22 @@
+<h1 class="header"><%=t 'partners.header' %></h1>
+
+<% @partners.each do |partner| %>
+
+  <ul class="section_name">  
+    <li>
+      <%= image_tag 'handy-icon_01.png' %>
+      <h3><%=raw( sanitize( partner.name) )%></h3>
+      <div class="partner_text"><%=raw( sanitize( partner.site ) )%></div>
+      <p class="links">
+        <%= admin_link_to partner.section, t('partners.edit'), edit_partner_path(partner) %> 
+        <%= admin_link_to partner.section, t('partners.destroy'), partner, method: :delete, data: { confirm: t('Are_you_sure?') } %>
+      </p>
+
+    </li>
+  </ul>
+
+<% end %>
+
+<br />
+
+<%= link_to t('partners.new'), new_partner_path if current_user%>

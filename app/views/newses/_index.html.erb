@@ -6,7 +6,11 @@
     <li>
       <%= image_tag 'handy-icon_01.png' %>
       <h3><%=raw( sanitize( newse.name( I18n.locale ) ) )%></h3>
-      <div class="newse_text"><%=raw( sanitize( newse.text( I18n.locale ) ) )%></div>
+      <div class="newse_text"><%= 
+
+        sanitize( newse.text( I18n.locale ) ) 
+
+      %></div>
       <p class="links">
         <%= admin_link_to newse.section, t('newses.edit'), edit_newse_path(newse) %> 
         <%= admin_link_to newse.section, t('newses.destroy'), newse, method: :delete, data: { confirm: t('Are_you_sure?') } %>
