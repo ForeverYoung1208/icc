@@ -11,7 +11,21 @@
     </div>
   <% end %>
 
+  <%= t 'contacts.editing.section' %>
+  <%= f.collection_select( :section_id, current_user.sections.all, :id, :name_int ) %>
+  <br/>
+  <%= f.label 'зміст:' %>
+  <%= f.text_area :text_ua, :class => "text_area" %>
+  <br/>
+  <%= f.label 'content' %>
+  <%= f.text_area :text_en, :class => "text_area" %>
+  <br/>
+    <%= f.label 'содержание' %>
+  <%= f.text_area :text_ru, :class => "text_area" %>
+  <br/>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit t('contacts.save')%>
   </div>
+
 <% end %>

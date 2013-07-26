@@ -1,0 +1,26 @@
+<h1 class="header"><%=t 'contacts.header' %></h1>
+
+<% @contacts.each do |contact| %>
+
+  <ul class="section_name">  
+    <li>
+      <%= image_tag 'handy-icon_01.png' %>
+      <h3><%=raw( sanitize( contact.name( I18n.locale ) ) )%></h3>
+      <div class="contact_text"><%= 
+
+        sanitize( contact.text( I18n.locale ) ) 
+
+      %></div>
+      <p class="links">
+        <%= admin_link_to contact.section, t('contacts.edit'), edit_contact_path(contact) %> 
+        <%= admin_link_to contact.section, t('contacts.destroy'), contact, method: :delete, data: { confirm: t('Are_you_sure?') } %>
+      </p>
+
+    </li>
+  </ul>
+
+<% end %>
+
+<br />
+
+<%= link_to t('contacts.new'), new_contact_path if current_user%>

@@ -1,5 +1,7 @@
 class ContactsController < ApplicationController
   before_filter :set_selected_page
+  before_filter :authenticate_user!, :only=>[:edit, :update, :new, :create]
+  before_filter :is_redactor, :except=>[:index, :new, :create]
   # GET /contacts
   # GET /contacts.json
   def index
@@ -7,6 +9,7 @@ class ContactsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
+      format.js {}
       format.json { render json: @contacts }
     end
   end
@@ -45,7 +48,7 @@ class ContactsController < ApplicationController
 
     respond_to do |format|
       if @contact.save
-        format.html { redirect_to @contact, notice: 'Contact was successfully created.' }
+        format.html { redirect_to contacts_path, notice: 'Contact was successfully created.' }
         format.json { render json: @contact, status: :created, location: @contact }
       else
         format.html { render action: "new" }
@@ -61,7 +64,7 @@ class ContactsController < ApplicationController
 
     respond_to do |format|
       if @contact.update_attributes(params[:contact])
-        format.html { redirect_to @contact, notice: 'Contact was successfully updated.' }
+        format.html { redirect_to contacts_path, notice: 'Contact was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -81,9 +84,18 @@ class ContactsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
   private
+
   def set_selected_page
       @selected_page = 'contacts'
+  end
+
+  def is_redactor
+    newse = Newse.find(params[:id])
+    if (current_user.nil? or not(current_user.redactor?( newse.section )) )
+      redirect_to request.referer, :notice =>( t('newses.not_allowed')+' '+t(newse.section.name) )
+    end
   end
 
 end

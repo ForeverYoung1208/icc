@@ -83,6 +83,25 @@ ua:
     new_header: "Новий партнер"
     new_back: "Назад"
 
+  contacts:
+    header: "Контакти"
+    edit_header: "Редагування контактів"
+    show: "Показати"
+    back: "Назад"
+    save: "Зберегти"
+    edit: "Редагувати"
+    destroy: "Видалити"
+    new: "Новий контакт"
+    successfully_created: "Новий контакт створений успішно"
+    successfully_updated: "Контакт успішно оновлен"
+    editing:
+      section: "Контакт належить до розділу:"
+
+  contact:
+    new_header: "Новий контакт"
+    new_back: "Назад"
+
+
   user_sections:
     u-list: "Всі доступні користувачі"
     s-list: "Всі розділи"
