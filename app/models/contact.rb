@@ -1,5 +1,5 @@
 class Contact < ActiveRecord::Base
-	attr_accessible :text_en, :name_ru, :text_ua, :section_id
+	attr_accessible :text_en, :text_ru, :text_ua, :section_id
 	belongs_to :section
 	validates :section, :presence => true
 

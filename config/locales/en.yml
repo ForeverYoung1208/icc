@@ -60,6 +60,10 @@ en:
     editing:
       section: "The news section refers to:"
 
+  newse:
+    new_header: "Submit News"
+    new_back: "Back"
+
   partners:
     header: "Partners"
     edit_header: "Edit partners"
@@ -78,8 +82,22 @@ en:
     new_header: "New Partner"
     new_back: "Back"
 
-  newse:
-    new_header: "Submit News"
+  contacts:
+    header: "Contacts"
+    edit_header: "Edit contacts"
+    show: "Show"
+    back: "Back"
+    save: "Save"
+    edit: "Edit"
+    destroy: "Remove"
+    new: "New Contact"
+    successfully_created: "The new contact is created successfully"
+    successfully_updated: "Contact successfully updated"
+    editing:
+      section: "Contact belongs to the section:"
+
+  contact:
+    new_header: "New Contact"
     new_back: "Back"
 
 

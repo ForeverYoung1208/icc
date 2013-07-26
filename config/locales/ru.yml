@@ -58,9 +58,12 @@ ru:
     successfully_updated: "Новость успешно обновлена​​"
     editing:
       section: "Новость относится к разделу:"
+  newse:
+    new_header: "Добавить новость"
+    new_back: "Назад"      
 
   partners:
-    header: "Партнеры компании"
+    header: "Наши партнеры и клиенты"
     edit_header: "Редактирование партнеров"
     show: "Показать"
     back: "Назад"
@@ -75,11 +78,26 @@ ru:
 
   partner:
     new_header: "Новый партнер"
+    new_back: "Назад"    
+
+  contacts:
+    header: "Контакты"
+    edit_header: "Редактирование контактов"
+    show: "Показать"
+    back: "Назад"
+    save: "Сохранить"
+    edit: "Редактировать"
+    destroy: "Удалить"
+    new: "Новый контакт"
+    successfully_created: "Новый контакт создан успешно"
+    successfully_updated: "Контакт успешно обновлен​​"
+    editing:
+      section: "Контакт относится к разделу:"
+
+  contact:
+    new_header: "Новый контакт"
     new_back: "Назад"     
 
-  newse:
-    new_header: "Добавить новость"
-    new_back: "Назад"      
 
   user_sections:
     u-list: "Все доступные пользователи"
