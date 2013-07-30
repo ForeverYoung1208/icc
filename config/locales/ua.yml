@@ -125,3 +125,9 @@ ua:
           attributes:
             section:
               blank: ": Послуга повинна бути пов'язана з розділом!"
+
+
+  sign_in:
+    header: "Вхід редактора"
+    email: "e-mail"
+    button: "вхід"
