@@ -122,3 +122,8 @@ ru:
           attributes:
             section:
               blank: ": Услуга должна быть связана с разделом!"
+
+  sign_in:
+    header: "Вход редактора"
+    email: "e-mail"
+    button: "вход"

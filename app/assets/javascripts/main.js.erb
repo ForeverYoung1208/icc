@@ -1,5 +1,5 @@
 function setupTileBehavior() {
-	$('.tile').hover(
+	$('.tile.animated').hover(
 		function(){
 			$(this).filter(':not(:animated)').animate({
 				boxShadow: "10px 10px 6px 2px #AA5252"
@@ -12,13 +12,13 @@ function setupTileBehavior() {
 		}
 	);
 
-	$('.tile').on("mousedown", function(event){
+	$('.tile.animated').on("mousedown", function(event){
 		$(this).stop().animate({
 			boxShadow: "1px 1px 6px #777777"
 		},50);
 	});
 
-	$('.tile').on("mouseup", function(event){
+	$('.tile.animated').on("mouseup", function(event){
 		startLoadingAnimation()
 		$('#notice').hide('fade');
 		$('#content').hide('fade');
@@ -63,12 +63,14 @@ $(document).ready(function(){
 		}
 	);
 	$('#menu a').on("click", function(event){
-		startLoadingAnimation()
+
+		startLoadingAnimation();
 		$('#notice').hide('fade');
 		$('#content').hide('fade');
 		$('#menu').find('a').removeClass('selected',300);
 		$(this).css({'background-color':'#F2C2C2'});
 		$(this).addClass('selected',300);
+
 	});
 
 	setupTileBehavior();

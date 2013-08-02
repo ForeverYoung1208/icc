@@ -10,7 +10,7 @@ class PartnersController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.js {}      
+      format.js { @show_section='#header' }
       format.json { render json: @partners }
     end
   end

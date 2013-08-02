@@ -115,7 +115,7 @@ en:
         signed_up: "New user created succefully"
     sessions:
       user:
-        signed_in "User login is successful"
+        signed_in: "User login is successful"
 
   activerecord:
     errors:
@@ -124,3 +124,8 @@ en:
           attributes:
             section:
               blank: ": The service must be associated with section!"
+
+  sign_in:
+    header: "Logon Editor"
+    email: "e-mail"
+    button: "Exit"

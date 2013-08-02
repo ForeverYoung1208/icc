@@ -5,10 +5,9 @@ class NewsesController < ApplicationController
   # GET /newses.json
   def index
     @newses=Newse.all
-
     respond_to do |format|
       format.html # index.html.erb
-      format.js {}
+      format.js { @show_section='#header' }
       format.json { render json: @newses }
     end
   end

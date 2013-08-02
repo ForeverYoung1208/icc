@@ -16,17 +16,17 @@
 
 
 	<div class="row"> 
-		<%= link_to services_path(selected_section: @sections[0].id), :remote=> true, class: 'tile', id: 't21' do %>
+		<%= link_to services_path(selected_section: @sections[0].id), :remote=> true, class: ['tile', 'animated'], id: 't21' do %>
 			<%= image_tag '21-200x150.png'%>
 			<div><%= @sections[0].name_int %></div>
 		<%end%>
 
-		<%= link_to services_path(selected_section: @sections[1].id), :remote=> true, class: 'tile', id: 't22' do %> 
+		<%= link_to services_path(selected_section: @sections[1].id), :remote=> true, class: ['tile', 'animated'], id: 't22' do %> 
 			<%= image_tag '22-200x150.png'%>
 			<div><%= @sections[1].name_int %></div>
 		<%end%>
 
-		<%= link_to services_path(selected_section: @sections[2].id), :remote=> true, class: 'tile', id: 't23' do %> 
+		<%= link_to services_path(selected_section: @sections[2].id), :remote=> true, class: ['tile', 'animated'], id: 't23' do %> 
 			<%= image_tag '23-200x150.png'%>
 			<div><%= @sections[2].name_int %></div>
 		<%end%>
@@ -34,17 +34,17 @@
 
 
 	<div class="row"> 
-		<%= link_to newses_path, {:remote=> true, class: 'tile', id: 't31'} do %>
+		<%= link_to newses_path, {:remote=> true, class: ['tile', 'animated'], id: 't31'} do %>
 			<%= image_tag '31-200x152.png'%>
 			<div><%=t 'tiles.t31'%></div>
 		<%end%>
 
-		<%= link_to main_path, {:remote=> true, class: 'tile', id: 't32'} do %> 
+		<%= link_to partners_path, {:remote=> true, class: ['tile', 'animated'], id: 't32'} do %> 
 			<%= image_tag '32-200x150.png'%>
 			<div><%=t 'tiles.t32'%></div>
 		<%end%>
 
-		<%= link_to main_path, {:remote=> true, class: 'tile', id: 't33'} do %> 
+		<%= link_to contacts_path, {:remote=> true, class: ['tile', 'animated'], id: 't33'} do %> 
 			<%= image_tag '33-195x215.png'%>
 			<div><%=t 'tiles.t33'%></div>
 		<%end%>

@@ -4,8 +4,8 @@ $('#content').hide('fade', function(){
 
 $('#content').show('fade',function() {
 	stopLoadingAnimation();
-	<% if !@selected_section.nil? %>
-		$.scrollTo('.section_name#<%= @selected_section %>', 500)
+	<% if !@show_section.nil? %>
+		$.scrollTo('<%= @show_section %>')
 	<% end %>
 });
 
