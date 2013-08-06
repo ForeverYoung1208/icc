@@ -87,8 +87,8 @@ class UserSectionsController < ApplicationController
   end
 
   def reset_u_pwd
-    redirect_to root_path, :notice => t('user_sections.password_reseted')
-
+    
+    redirect_to user_sections_path, :notice => t('user_sections.password_reseted')
   end
 
 
