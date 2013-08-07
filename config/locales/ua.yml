@@ -3,6 +3,9 @@ ua:
   Destroy: "Видалити"
   Are_you_sure?: "Ви впевнені?"
   admin_section: "Адміністративний розділ"
+  Sign_in: "Вхід редактора"
+  Sign_up: "Новий користувач"
+
   time:
     formats:
       default: "%HH:%MM"
@@ -109,6 +112,10 @@ ua:
     new_us: "Нове право користувача"
     new_user: "Новий користувач"
     successfully_created: "Нове право користувача створено успішно"
+    reset_user_password: "Скинути пароль"
+    delete_user: "Видалити корискувача"
+    user_deleted: "Користувача видалено"
+    password_reset: "Пароль скинуто"
 
   devise:
     registrations:
@@ -117,6 +124,7 @@ ua:
     sessions:
       user:
         signed_in: "Вхід користувача здійснений успішно"
+        signed_out: "Вихід користувача здійснений успішно"
 
   activerecord:
     errors:

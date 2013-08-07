@@ -9,8 +9,9 @@
     <% User.all.each do |user| %>
       <tr>
         <td><%= user.email %></td>
-        <td><%= link_to t('user_sections.reset_user_password'), reset_u_pwd_path %></td>
-        <td><%= button_to t('user_sections.delete_user'), edit_user_registration_path, method: :delete, sdata: { confirm: t('Are_you_sure?') } %></td>
+        <td><%= link_to t('user_sections.reset_user_password'), reset_u_pwd_path(user.id), method: :post, data: { confirm: t('Are_you_sure?') } %></td>
+
+        <td><%= button_to t('user_sections.delete_user')+user.id.to_s, delete_user_path(user.id), method: :delete, data: { confirm: t('Are_you_sure?') } %></td>
       </tr>
     <% end %>
   </table>

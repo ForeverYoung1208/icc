@@ -3,6 +3,9 @@ ru:
   Destroy: "Удалить"
   Are_you_sure?: "Вы уверены?"
   admin_section: "Административный раздел"
+  Sign_in: "Вход редактора"
+  Sign_up: "Новый пользователь"
+
   time:
     formats:
       default: "%HH:%MM"
@@ -106,6 +109,10 @@ ru:
     new_us: "Новое право пользователя"
     new_user: "Новый пользователь"
     successfully_created: "Новое право пользователя создано успешно"
+    reset_user_password: "Сбросить пароль"
+    delete_user: "Удалить пользователя"
+    user_deleted: "Пользователь удален"
+    password_reset: "Пароль сброшен"
 
   devise:
     registrations:
@@ -114,6 +121,7 @@ ru:
     sessions:
       user:
         signed_in: "Вход пользователя осуществлен успешно"
+        signed_out: "Выход пользователя осуществлен успешно"
 
   activerecord:
     errors:

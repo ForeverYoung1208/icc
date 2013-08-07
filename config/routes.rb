@@ -4,10 +4,12 @@ Icc::Application.routes.draw do
 
 
   resources :user_sections
-  get "user/reset_u_pwd" => "user_sections#reset_u_pwd", :as => :reset_u_pwd
+
+  post "user/:id/reset_u_pwd" => "user_sections#reset_u_pwd", :as => :reset_u_pwd
+  delete "user/:id/delete" => "user_sections#delete_user", :as => :delete_user
 
 
-  devise_for :users
+  devise_for :users, :controllers => { :registrations => 'registrations' } 
 
   resources :contacts
 

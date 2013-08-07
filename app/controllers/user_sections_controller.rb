@@ -87,8 +87,17 @@ class UserSectionsController < ApplicationController
   end
 
   def reset_u_pwd
-    
-    redirect_to user_sections_path, :notice => t('user_sections.password_reseted')
+    User.find_by_id(params[:id]).update_attributes({
+        password: '123456',
+        password_confirmation: '123456'
+      })
+
+    redirect_to user_sections_path, :notice => t('user_sections.password_reset')
+  end
+
+  def delete_user
+    User.find_by_id(params[:id]).destroy
+    redirect_to user_sections_path, :notice => t('user_sections.user_deleted')
   end
 
 
