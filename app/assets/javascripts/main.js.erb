@@ -19,6 +19,7 @@ function setupTileBehavior() {
 	});
 
 	$('.tile.animated').on("mouseup", function(event){
+		history.pushState(null, "adsaasd", this.href);
 		startLoadingAnimation()
 		$('#notice').hide('fade');
 		$('#content').hide('fade');
@@ -47,7 +48,13 @@ function stopLoadingAnimation() // - функция останавливающа
   $("#loadImg").hide();
 };
 
-
+$(function () {
+  // Other functions omitted.
+  $(window).bind("popstate", function () {
+    $.getScript(location.href);
+	$('#menu').find('a').removeClass('selected',300);
+  });
+})
 
 $(document).ready(function(){
 	$('#menu li').hover(
@@ -65,6 +72,7 @@ $(document).ready(function(){
 	$('#menu a').on("click", function(event){
 
 		startLoadingAnimation();
+		history.pushState(null, "", this.href);
 		$('#notice').hide('fade');
 		$('#content').hide('fade');
 		$('#menu').find('a').removeClass('selected',300);

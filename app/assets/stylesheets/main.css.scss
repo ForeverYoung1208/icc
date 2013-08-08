@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$all-with: 960px;
+$all-width: 960px;
 
 $debug-color: #FFFFFF;
 $d: 0;
@@ -17,7 +17,7 @@ $menu-distantion: 60px;
 $menu-padding: 10px;
 
 $tile-margin:40px;
-$tile-size: ($all-with - 6 * $tile-margin) / 3;
+$tile-size: ($all-width - 6 * $tile-margin) / 3;
 
 $tile-color-1: #F2F2F2;
 $tile-color-2: #E5E5E5;
@@ -33,12 +33,12 @@ $menu-selected-color: $tile-color-5;
 
 body {
 	/*background-color: #401010;*/
-	background-color: $tile-color-1;
+	/*background-color: $tile-color-1;*/
 }
 
 #all_wrapper {
 	background-color: $debug-color;
-	width: $all-with;
+	width: $all-width;
 	margin:0 auto;
 	padding: $buffer;
 }
@@ -46,6 +46,7 @@ body {
 a:hover, a:active, a:focus {
 	outline: 0; 
 }
+
 
 #header{
 	background-color: $debug-color - 2*$d;
@@ -213,6 +214,35 @@ div#content{
 	display:none;
 	height: 48px;
 	width: 48px;
+}
+
+#news_area {
+	top: 0px;
+	position:absolute;
+	display: inline;
+	left: 1435px;
+	width: 250px;
+	height: 1240px;
+
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+/*background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y5Y2NjZCIgc3RvcC1vcGFjaXR5PSIwLjM2Ii8+CiAgICA8c3RvcCBvZmZzZXQ9IjcyJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjgyIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);*/
+background: -moz-linear-gradient(top, rgba(249,204,205,0.36) 0%, rgba(255,255,255,0.82) 72%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(249,204,205,0.36)), color-stop(72%,rgba(255,255,255,0.82)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(249,204,205,0.36) 0%,rgba(255,255,255,0.82) 72%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(249,204,205,0.36) 0%,rgba(255,255,255,0.82) 72%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(249,204,205,0.36) 0%,rgba(255,255,255,0.82) 72%,rgba(255,255,255,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(249,204,205,0.36) 0%,rgba(255,255,255,0.82) 72%,rgba(255,255,255,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5cf9cccd', endColorstr='#ffffff',GradientType=0 ); /* IE6-8 */
+
+	ul{
+		font-weight: bold;
+	};
+
+	li{
+		margin-left: 50px;
+		margin-top: 10px;
+		padding: 0;
+	}
 }
 
 #footer {
