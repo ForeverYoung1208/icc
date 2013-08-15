@@ -4,7 +4,7 @@
 
   <ul class="section_name">  
     <li>
-      <%= image_tag 'handy-icon_01.png' %>
+      <%= image_tag 'news1.jpg', class: 'list_marker'%>
       <h3><%=raw( sanitize( newse.name( I18n.locale ) ) )%></h3>
       <div class="newse_text"><%= 
 
@@ -14,6 +14,7 @@
       <p class="links">
         <%= admin_link_to newse.section, t('newses.edit'), edit_newse_path(newse) %> 
         <%= admin_link_to newse.section, t('newses.destroy'), newse, method: :delete, data: { confirm: t('Are_you_sure?') } %>
+        <%= newse.updated_at.strftime("%d.%m.%Y") %>
       </p>
 
     </li>

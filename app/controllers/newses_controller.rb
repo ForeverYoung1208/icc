@@ -4,7 +4,7 @@ class NewsesController < ApplicationController
   before_filter :is_redactor, :except=>[:index, :new, :create]
   # GET /newses.json
   def index
-    @newses=Newse.all
+    @newses=Newse.order('updated_at DESC').all
     respond_to do |format|
       format.html # index.html.erb
       format.js { @show_section='#header' }

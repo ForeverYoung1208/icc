@@ -8,10 +8,11 @@ ua:
 
   time:
     formats:
-      default: "%HH:%MM"
+      default: "%H:%M"
   date:
     formats:
       default: "%DD.%MM.%YYYY"
+
   menu:
     main: "Головна"
     services: "Послуги"

@@ -17,7 +17,7 @@ ul.section_name {
 		padding-left: 10px;
 	}
 
-	img { 
+	.list_marker { 
 		margin: 0 30px 30px 0;
 		float: left;
 	}
@@ -32,18 +32,19 @@ ul.section_name {
 	            family: heinrich;
 	        }
 	    }
-
-	    .service_text {
-	        border-bottom: 1px solid #CCCCCC;
-	        padding-bottom: 10px;
-            text: {
-                align: justify;
-            }
-        }
-
         p.links { text-align: right; }
 	}
 }
+
+.service_text, .newse_text {
+    border-bottom: 1px solid #CCCCCC;
+    padding-bottom: 10px;
+    clear: both;
+    text: {
+        align: justify;
+    }
+}
+
 
 textarea.text_area {
   width: 100%;
