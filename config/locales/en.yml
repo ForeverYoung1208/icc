@@ -5,6 +5,7 @@ en:
   admin_section: "Administrative Section"
   Sign_in: "Sign in"
   Sign_up: "Sign up (new user)"
+  latest_news: "Latest news"
 
   time:
     formats:

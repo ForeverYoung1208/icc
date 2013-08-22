@@ -19,4 +19,8 @@ class Newse < ActiveRecord::Base
 		end
 	end
 
+	def self.all_headers
+		[]
+	end
+
 end

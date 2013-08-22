@@ -5,6 +5,7 @@ ru:
   admin_section: "Административный раздел"
   Sign_in: "Вход редактора"
   Sign_up: "Новый пользователь"
+  latest_news: "последние новости"
 
   time:
     formats:

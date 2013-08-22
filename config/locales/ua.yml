@@ -5,6 +5,7 @@ ua:
   admin_section: "Адміністративний розділ"
   Sign_in: "Вхід редактора"
   Sign_up: "Новий користувач"
+  latest_news: "Останні новини"
 
   time:
     formats:

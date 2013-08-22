@@ -1,3 +1,10 @@
+$(function () {
+  $(window).bind("popstate", function () {
+    $.getScript(location.href);
+	$('#menu').find('a').removeClass('selected',300);
+  });
+})
+
 function setupTileBehavior() {
 	$('.tile.animated').hover(
 		function(){
@@ -48,13 +55,19 @@ function stopLoadingAnimation() // - функция останавливающа
   $("#loadImg").hide();
 };
 
-$(function () {
-  // Other functions omitted.
-  $(window).bind("popstate", function () {
-    $.getScript(location.href);
-	$('#menu').find('a').removeClass('selected',300);
-  });
-})
+function loadLatestNews(){
+	$.getJSON('/newses.json', function(data){
+	  var news = [];
+	  $.each(data, function(key, val){
+	    news.push('<li>' + val + '</li>');
+	  });
+ 
+	  $('<ul/>', { html: news.join('')} ).appendTo('#news_area');
+
+	});
+
+};
+
 
 $(document).ready(function(){
 	$('#menu li').hover(
@@ -69,8 +82,8 @@ $(document).ready(function(){
 			});
 		}
 	);
-	$('#menu a').on("click", function(event){
 
+	$('#menu a').on("click", function(event){
 		startLoadingAnimation();
 		history.pushState(null, "", this.href);
 		$('#notice').hide('fade');
@@ -78,9 +91,10 @@ $(document).ready(function(){
 		$('#menu').find('a').removeClass('selected',300);
 		$(this).css({'background-color':'#F2C2C2'});
 		$(this).addClass('selected',300);
-
 	});
 
 	setupTileBehavior();
+
+	loadLatestNews();
 
 })
