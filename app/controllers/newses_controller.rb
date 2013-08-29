@@ -5,12 +5,12 @@ class NewsesController < ApplicationController
   # GET /newses.json
   def index
     @newses=Newse.order('updated_at DESC').all
-    @headers=Newse.all_headers
+    @headers=Newse.headers(10)
 
     respond_to do |format|
       format.html # index.html.erb
       format.js { @show_section='#header' }
-      format.json { render json: @headers[0..10] }
+      format.json { render json: @headers }
     end
   end
 
