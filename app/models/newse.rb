@@ -19,8 +19,4 @@ class Newse < ActiveRecord::Base
 		end
 	end
 
-	def self.headers(count)
-		['new1','new2']
-	end
-
 end

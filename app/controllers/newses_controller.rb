@@ -4,8 +4,10 @@ class NewsesController < ApplicationController
   before_filter :is_redactor, :except=>[:index, :new, :create]
   # GET /newses.json
   def index
-    @newses=Newse.order('updated_at DESC').all
-    @headers=Newse.headers(10)
+
+    @newses=Newse.order( 'updated_at DESC' ).all #returns array of Newse
+
+    @headers=Newse.select("id, name_#{locale}").order( "updated_at DESC" ).limit( 10 )
 
     respond_to do |format|
       format.html # index.html.erb
