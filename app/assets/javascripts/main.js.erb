@@ -57,16 +57,12 @@ function stopLoadingAnimation() // - функция останавливающа
 
 function loadLatestNews(){
 	$.getJSON('/newses.json', function(data){
+		var news = [];
+	  $.each(data, function(key, val){
+	    news.push('<li>' + val.name_int +'</li>');
+		});
 
-		var news = JSON.parse(data)	
-
-//	  var news = [];
-//	  $.each(data, function(key, val){
-//	    news.push('<li>' + val + '</li>');
-//	  });
-// 
 	  $('<ul/>', { html: news.join('')} ).appendTo('#news_area');
-
 	});
 
 };

@@ -7,7 +7,7 @@ class NewsesController < ApplicationController
 
     @newses=Newse.order( 'updated_at DESC' ).all #returns array of Newse
 
-    @headers=Newse.select("id, name_#{locale}").order( "updated_at DESC" ).limit( 10 )
+    @headers=Newse.select("id, name_#{locale} AS name_int").order( "updated_at DESC" ).limit( 10 )
 
     respond_to do |format|
       format.html # index.html.erb

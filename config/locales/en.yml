@@ -135,6 +135,6 @@ en:
               blank: ": The service must be associated with section!"
 
   sign_in:
-    header: "Logon Editor"
+    header: "Login Editor"
     email: "e-mail"
-    button: "Exit"
+    button: "Login"
