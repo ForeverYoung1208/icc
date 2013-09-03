@@ -26,7 +26,7 @@ function setupTileBehavior() {
 	});
 
 	$('.tile.animated').on("mouseup", function(event){
-		history.pushState(null, "adsaasd", this.href);
+		if ("pushState" in history) { history.pushState(null, "adsaasd", this.href); }
 		startLoadingAnimation()
 		$('#notice').hide('fade');
 		$('#content').hide('fade');
@@ -84,7 +84,7 @@ $(document).ready(function(){
 
 	$('#menu a').on("click", function(event){
 		startLoadingAnimation();
-		history.pushState(null, "", this.href);
+		if ("pushState" in history) { history.pushState(null, "", this.href); }
 		$('#notice').hide('fade');
 		$('#content').hide('fade');
 		$('#menu').find('a').removeClass('selected',300);
