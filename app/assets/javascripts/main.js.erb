@@ -59,7 +59,7 @@ function loadLatestNews(){
 	$.getJSON('/newses.json', function(data){
 		var news = [];
 	  $.each(data, function(key, val){
-	    news.push('<li>' + val.name_int +'</li>');
+	    news.push('<li><a href="newses?selected_section='+ val.id+'">' + val.name_int +'</a></li><br/>');
 		});
 
 	  $('<ul/>', { html: news.join('')} ).appendTo('#news_area');

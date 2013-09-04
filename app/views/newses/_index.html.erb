@@ -2,7 +2,7 @@
 
 <% @newses.each do |newse| %>
 
-  <ul class="section_name">  
+  <ul class="section_name" id="<%= newse.id %>">
     <li>
       <%= image_tag 'news1.jpg', class: 'list_marker'%>
       <h3><%=raw( sanitize( newse.name( I18n.locale ) ) )%></h3>

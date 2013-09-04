@@ -8,6 +8,7 @@ class NewsesController < ApplicationController
     @newses=Newse.order( 'updated_at DESC' ).all #returns array of Newse
 
     @headers=Newse.select("id, name_#{locale} AS name_int").order( "updated_at DESC" ).limit( 10 )
+    @selected_section = params['selected_section']    
 
     respond_to do |format|
       format.html # index.html.erb
