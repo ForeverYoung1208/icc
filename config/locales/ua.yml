@@ -1,6 +1,7 @@
 ua:
   Edit: "Редагувати"
   Destroy: "Видалити"
+  Back: "Назад"
   Are_you_sure?: "Ви впевнені?"
   admin_section: "Адміністративний розділ"
   Sign_in: "Вхід редактора"
@@ -83,6 +84,8 @@ ua:
     successfully_updated: "Партнер успішно оновлен"
     editing:
       section: "Партнер належить до розділу:"
+      text_info: "Інформація про партнера"
+      header: "Редагування партнера"
 
   partner:
     new_header: "Новий партнер"

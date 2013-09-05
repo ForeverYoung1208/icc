@@ -1,0 +1,5 @@
+<% @headers.each do |header|%>
+	<li>
+		<%= link_to header.name_int, newses_path(selected_section: header.id), class: 'newse_header', remote: true %>
+	</li>
+<% end%>	

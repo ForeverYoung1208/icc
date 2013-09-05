@@ -5,15 +5,14 @@ class NewsesController < ApplicationController
   # GET /newses.json
   def index
 
-    @newses=Newse.order( 'updated_at DESC' ).all #returns array of Newse
+    @newses=Newse.order( 'updated_at DESC' ).all
 
-    @headers=Newse.select("id, name_#{locale} AS name_int").order( "updated_at DESC" ).limit( 10 )
-    @selected_section = params['selected_section']    
+#    @headers=Newse.select("id, name_#{locale} AS name_int").order( "updated_at DESC" ).limit( 10 )
 
     respond_to do |format|
       format.html # index.html.erb
-      format.js { @show_section='#header' }
-      format.json { render json: @headers }
+      format.js { @show_section='#'+ params['selected_section'] if params['selected_section'] }
+      format.json { render json: @newses} #@headers }
     end
   end
 

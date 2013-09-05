@@ -1,6 +1,7 @@
 ru:
   Edit: "Редактировать"
   Destroy: "Удалить"
+  Back: "Назад"
   Are_you_sure?: "Вы уверены?"
   admin_section: "Административный раздел"
   Sign_in: "Вход редактора"
@@ -79,6 +80,8 @@ ru:
     successfully_updated: "Партнер успешно обновлен​​"
     editing:
       section: "Партнер относится к разделу:"
+      text_info: "Информация о партнере"
+      header: "Редактирование партнера"
 
   partner:
     new_header: "Новый партнер"

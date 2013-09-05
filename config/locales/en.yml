@@ -1,6 +1,7 @@
 en:
   Edit: "Edit"
   Destroy: "Destroy"
+  Back: "Back"
   Are_you_sure?: "Are you sure?"
   admin_section: "Administrative Section"
   Sign_in: "Sign in"
@@ -81,6 +82,8 @@ en:
     successfully_updated: "Partner successfully updated"
     editing:
       section: "partner belongs to the section:"
+      text_info: "Information about the partner"
+      header: "Editing partner"
 
   partner:
     new_header: "New Partner"

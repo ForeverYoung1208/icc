@@ -71,8 +71,11 @@
 	</div>
 
 	<div id='news_area'> 
-		<h3><%=t 'latest_news' %></h3>
 
+		<h3><%=t 'latest_news' %></h3>
+		<ul>
+			<%= render "layouts/news_headers" %>
+		</ul>
 	</div>
 
 	<%= image_tag "loadinfo.gif", id: "loadImg" %>
@@ -86,7 +89,7 @@
 			<%=t 'footer.copyright' %>
 			<div class='admin_section'>
 				<%= link_to t('admin_section'), :user_sections if !current_user.nil?&&current_user.admin?%>
-				<%=link_to_if(current_user.nil?, t('footer.login'), :new_user_session) do 
+				<%= link_to_if(current_user.nil?, t('footer.login'), :new_user_session) do 
 					link_to t('footer.logout')+' ('+current_user.email+')', :destroy_user_session, :method=>:delete 
 				end%>
 			</div>

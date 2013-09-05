@@ -5,7 +5,8 @@
   <ul class="section_name">  
     <li>
       <h3><%=raw( sanitize( partner.name) )%></h3>
-      <div class="partner_text"><%=raw( sanitize( partner.site ) )%></div>
+      <div class="partner_text"><%= sanitize( partner.text )%></div>
+
       <p class="links">
         <%= admin_link_to partner.section, t('partners.edit'), edit_partner_path(partner) %> 
         <%= admin_link_to partner.section, t('partners.destroy'), partner, method: :delete, data: { confirm: t('Are_you_sure?') } %>
