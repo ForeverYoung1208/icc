@@ -17,7 +17,11 @@
 	<header>
 		<div id='header'>
 			<div id='logo'>
-				<%= image_tag 'logo.png' %>
+				<%= 
+					link_to root_path do
+						image_tag 'logo.png' 
+					end
+				%>
 			</div>
 			<div id='name'>
 				<h2>INVESTMENT CONSULTING CENTRE</h2>
@@ -76,6 +80,7 @@
 		<ul>
 			<%= render "layouts/news_headers" %>
 		</ul>
+
 	</div>
 
 	<%= image_tag "loadinfo.gif", id: "loadImg" %>

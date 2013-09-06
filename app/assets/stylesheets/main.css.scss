@@ -220,9 +220,15 @@ div#content{
 
 #news_area {
 	top: 0px;
+/*	
 	position:absolute;
-	display: inline;
 	left: $all-width;
+*/
+	position:fixed;
+	left: 50%;
+	margin-left: $all-width / 2;
+
+	display: inline;
 	width: 250px;
 	height: 1240px;
 	color: #646466;
@@ -254,7 +260,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5cf9cccd', e
 			a:hover { text-decoration:underline } 
 		}
 	};
-
 }
 
 #footer {
@@ -274,4 +279,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5cf9cccd', e
 .list_marker {
 	width: 54px;
 	height: 50px;
+}
+
+.up_arrow {
+	float: right;
+	width: 32px;
+	height: 32px;
+	background-size: 100%;
+	background-image: url('red_arrow_up.png');
+}
+
+.up_arrow:hover {
+
+	background-image: url('red_arrow_up_shadow.png');
 }

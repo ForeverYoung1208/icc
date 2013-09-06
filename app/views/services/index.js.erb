@@ -7,6 +7,10 @@ $('#content').show('fade',function() {
 	<% if !@selected_section.nil? %>
 		$.scrollTo('.section_name#<%= @selected_section %>', 500)
 	<% end %>
+}).on('click', '.up_arrow', function(event){
+	$.scrollTo('#logo', 300);	
 });
 
 $('a#services').addClass('selected',300);
+
+
