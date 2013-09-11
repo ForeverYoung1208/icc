@@ -21,7 +21,7 @@ Icc::Application.configure do
   config.assets.digest = true
 
 ####################
-  config.assets.precompile += %w[*.png *.jpg *.jpeg *.gif]
+  config.assets.precompile += %w[*.png *.jpg *.jpeg *.gif *.ico]
 
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
