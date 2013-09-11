@@ -24,6 +24,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 2.0'
   gem 'factory_girl_rails'
   gem 'database_cleaner'
+  gem 'debugger'
 end
 
 gem 'jquery-rails'
@@ -41,7 +42,6 @@ gem 'jquery-rails'
 # gem 'capistrano'
 
 # To use debugger
-gem 'debugger'
 
 gem 'devise'
 
