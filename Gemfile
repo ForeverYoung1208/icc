@@ -27,8 +27,12 @@ group :development, :test do
   gem 'debugger'
 end
 
+
+group :production do
+  gem 'therubyracer'
+end
+
 gem 'jquery-rails'
-gem 'therubyracer'
 gem 'carrierwave'
 
 # To use ActiveModel has_secure_password
