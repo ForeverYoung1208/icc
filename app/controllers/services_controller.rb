@@ -4,6 +4,11 @@ class ServicesController < ApplicationController
   before_filter :is_redactor, :except=>[:index, :new, :create]
   # GET /services.json
   def index
+
+
+    section = Section.first
+    section.rename
+
     @groups_services = {}
     @sections = Section.all
     @selected_section = params['selected_section']
@@ -24,6 +29,7 @@ class ServicesController < ApplicationController
   # GET /services/1.json
 
   def show
+
     @service = Service.find(params[:id])
 
     respond_to do |format|
