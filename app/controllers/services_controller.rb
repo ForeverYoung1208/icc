@@ -5,9 +5,10 @@ class ServicesController < ApplicationController
   # GET /services.json
   def index
 
-
-    section = Section.first
-    section.rename
+#    Uncoment following lines to allow automatic "sections" rename according to model "section" settings
+#    
+#    section = Section.first
+#    section.rename
 
     @groups_services = {}
     @sections = Section.all
