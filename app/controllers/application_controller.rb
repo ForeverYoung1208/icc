@@ -3,9 +3,14 @@ class ApplicationController < ActionController::Base
 
   before_filter :get_locale, :get_latest_news_headers
 
+	# def get_locale
+	#   I18n.locale = session['locale']||'ua'
+	# end
+
 	def get_locale
-	  I18n.locale = session['locale']||'ua'
+	  I18n.locale = params[:locale]||'ua'
 	end
+
 
 	def get_latest_news_headers
 	   @headers=Newse.select("id, name_#{locale} AS name_int").order( "updated_at DESC" ).limit( 10 )

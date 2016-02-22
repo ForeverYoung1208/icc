@@ -1,26 +1,31 @@
 Icc::Application.routes.draw do
 
-  resources :partners
-
-
-  resources :user_sections
 
   post "images/store" => "images#store", :as => :images_store
   post "user/:id/reset_u_pwd" => "user_sections#reset_u_pwd", :as => :reset_u_pwd
   delete "user/:id/delete" => "user_sections#delete_user", :as => :delete_user
 
 
-  devise_for :users, :controllers => { :registrations => 'registrations' } 
-
-  resources :contacts
-
-
-  resources :newses
-  resources :services
+  scope '(:locale)' do
+    resources :partners
 
 
-  get "main" => 'main#index', :as=>:main
-  get "main/set_locale" => "main#set_locale", :as => :set_locale
+    resources :user_sections
+
+    devise_for :users, :controllers => { :registrations => 'registrations' } 
+
+    resources :contacts
+
+
+    resources :newses
+    resources :services
+
+
+    get "main" => 'main#index', :as=>:main
+    get "main/set_locale" => "main#set_locale", :as => :set_locale
+    root :to => 'main#index'
+  end
+
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -72,7 +77,6 @@ Icc::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
 
-  root :to => 'main#index'
 
   # See how all your routes lay out with "rake routes"
 
