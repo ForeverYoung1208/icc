@@ -11,6 +11,9 @@ class ApplicationController < ActionController::Base
 	  I18n.locale = params[:locale]||'ua'
 	end
 
+	def default_url_options
+		{ locale: I18n.locale }.merge(super)
+	end
 
 	def get_latest_news_headers
 	   @headers=Newse.select("id, name_#{locale} AS name_int").order( "updated_at DESC" ).limit( 10 )

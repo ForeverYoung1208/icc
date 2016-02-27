@@ -5,27 +5,22 @@ Icc::Application.routes.draw do
   post "user/:id/reset_u_pwd" => "user_sections#reset_u_pwd", :as => :reset_u_pwd
   delete "user/:id/delete" => "user_sections#delete_user", :as => :delete_user
 
+  devise_for :users, :controllers => { :registrations => 'registrations' } 
+  resources :user_sections
+
 
   scope '(:locale)' do
     resources :partners
-
-
-    resources :user_sections
-
-    devise_for :users, :controllers => { :registrations => 'registrations' } 
-
     resources :contacts
-
-
     resources :newses
     resources :services
 
 
     get "main" => 'main#index', :as=>:main
     get "main/set_locale" => "main#set_locale", :as => :set_locale
-    root :to => 'main#index'
   end
 
+  root :to => 'main#index'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
